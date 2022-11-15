@@ -27,9 +27,9 @@
                <img src="<?php echo $imageURL; ?>" alt="" />
                <?php
             }
+        }else{
+            echo '';   
         }
-
-        
         ?>
 
 </div>
