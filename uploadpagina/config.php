@@ -1,18 +1,29 @@
 <?php
+
+
+
+
+ini_set('display_errors', 1 );
+error_reporting(E_ALL);
+
 // Database configuration
-$dbHost     = "127.0.0.1";
-$dbUsername = "foto_upload";
-$dbPassword = "foto_upload";
-$dbName     = "foto_upload";
+$db_hostname = "localhost";
+$db_username = "foto_upload";
+$db_password = "foto_upload";
+$db_database = "foto_upload";
 
-// Create database connection
-$db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 
-// Check connection
-if ($db->connect_error) {
-    die("Connection failed: " . $db->connect_error);
+$mysqli = mysqli_connect($db_hostname, $db_username, $db_password, $db_database);
+
+
+if (!$mysqli) {
+    echo "FOUT: geen connectie naar database. <br>";
+    echo "Error: " . mysqli_connect_error() . "<br/>";
+    exit;
 }
+
 else{
-    echo "Verbinding met " . $db . " is gemaakt!<br/>";
+    echo "Verbinding met " . $db_database . " is gemaakt!<br/>";
 }
+
 ?>
