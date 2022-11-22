@@ -14,7 +14,7 @@
         <?php } ?>
 
 <form action="upload.php" method="post" enctype="multipart/form-data">
-    Selecteer uw foto's
+    <p>Selecteer uw foto's</p>
     <input type="file" name="files[]" multiple >
     <input type="submit" name="submit" value="UPLOAD">
 </form>
