@@ -38,7 +38,8 @@ if(isset($_POST['submit'])){
         if(!empty($insertValuesSQL)){ 
             $insertValuesSQL = trim($insertValuesSQL, ','); 
             // Insert image file name into database 
-            $insert = $db->query("INSERT INTO Posts (file_name, Aangemaakt_op) VALUES $insertValuesSQL"); 
+            $insert = $db->query("INSERT INTO images (file_name, uploaded_on) VALUES $insertValuesSQL"); 
+            return "fotoupload.php";
             if($insert){ 
                 $statusMsg = "Files are uploaded successfully.".$errorMsg; 
             }else{ 
@@ -53,4 +54,3 @@ if(isset($_POST['submit'])){
 } 
  
 ?>
-
