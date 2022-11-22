@@ -13,7 +13,7 @@
             <p class="status-msg"><?php echo $statusMsg;?></p>
         <?php } ?>
 
-<form action="upload.php" method="post" enctype="multipart/form-data">
+<form action="uploadverwerk.php" method="post" enctype="multipart/form-data">
     <p>Selecteer uw foto's</p>
     <input type="file" name="files[]" multiple >
     <input type="submit" name="submit" value="UPLOAD">
