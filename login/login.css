@@ -17,3 +17,13 @@ img {
     max-width: 100%;
     display: block;
 }
+
+#logo {
+    position: relative;
+}
+#logo img {
+    position: absolute;
+    width: 45px;
+    top: 0px;
+    right: 10px;
+}
