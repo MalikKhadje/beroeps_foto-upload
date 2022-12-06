@@ -20,9 +20,9 @@ if (!$mysqli) {
 }
 
 // test
-else {
-    echo "Verbinding met " . $db_database . " is gemaakt!<br/>";
-}
+// else {
+//     echo "Verbinding met " . $db_database . " is gemaakt!<br/>";
+// }
 // einde test
 
 ?>
