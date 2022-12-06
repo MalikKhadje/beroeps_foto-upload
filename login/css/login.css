@@ -73,10 +73,6 @@ img {
     padding: 5px;
 }
 
-.input::placeholder {
-    padding: 5px;
-}
-
 .login-knop {
     padding: 16px;
     font-size: 20px;
