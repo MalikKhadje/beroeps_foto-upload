@@ -28,10 +28,17 @@ html {
 }
 
 #logo {
-  width: 100px;
-  height: 100px;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  z-index: 1;
 }
 
+@media only screen and (max-width: 120px) {
+  #logo {
+    display: none;
+  }
+}
 #toggle:checked ~ .toggle-container .button-toggle:before {
   transform: translateY(-50%) rotate(45deg) scale(1);
 }
