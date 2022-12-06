@@ -27,3 +27,8 @@ img {
     top: 0px;
     right: 10px;
 }
+
+.titel {
+    text-align: center;
+    padding-top: 50px;
+}
