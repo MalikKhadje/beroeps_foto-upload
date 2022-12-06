@@ -99,6 +99,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         .wrapper{ width: 360px; padding: 20px; }
     </style>
 </head>
+<div id="logo">
+        <img src="../images/logo.png" class="logo" alt="">
+    </div>
 <h1 class="titel">LOGIN</h1>
 <body>
     <div class="container">
