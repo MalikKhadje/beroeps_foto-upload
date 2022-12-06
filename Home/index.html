@@ -1,22 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foto Upload</title>
-    
+
     <!-- links -->
     <link rel="stylesheet" href="Home.scss">
     <link rel="stylesheet" href="Home.css">
     <!-- JavaScript -->
     <script src="Home.js"></script>
 </head>
+
 <body>
     <!-- logo -->
     <!-- menu -->
+    <div class="container">
+        <!-- This checkbox will give us the toggle behavior, it will be hidden, but functional -->
+        <input id="toggle" type="checkbox">
+
+        <!-- IMPORTANT: Any element that we want to modify when the checkbox state changes go here, being "sibling" of the checkbox element -->
+
+        <!-- This label is tied to the checkbox, and it will contain the toggle "buttons" -->
+        <label class="toggle-container" for="toggle">
+            <!-- If menu is open, it will be the "X" icon, otherwise just a clickable area behind the hamburger menu icon -->
+            <span class="button button-toggle"></span>
+        </label>
+
+        <!-- The nav menu -->
+        <nav class="nav">
+            <a class="nav-item" href="">Home</a>
+            <a class="nav-item" href="">Upload</a>
+            <a class="nav-item" href="">Log uit</a>
+        </nav>
+    </div>
     <!-- carousel -->
     <!-- recente afbeeldingen -->
-    
+
 </body>
+
 </html>
