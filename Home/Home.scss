@@ -1,5 +1,14 @@
 @import url();
 
+$color-donkerblauw: #051738;
+$color-blauw: #003559;
+$color-wit: #efefef;
+
+$items: 4;
+$transition-duration: 0.5s;
+$transition-delay: 0.05s;
+// ************************************************************* BODY
+
 * {
     margin: 0;
     padding: 0;
@@ -10,18 +19,10 @@
 
 body,
 html {
-    background-color: #232323;
+    background-color: $color-wit;
 }
 
-$color-donkerblauw: #051738;
-$color-blauw: #003559;
-$color-wit: #fff;
-
 // ************************************************************* MENU
-
-$items: 4;
-$transition-duration: 0.5s;
-$transition-delay: 0.05s;
 
 .container {
     position: relative;
@@ -40,10 +41,9 @@ $transition-delay: 0.05s;
     top: -100%;
 }
 
-#toggle:focus {
-    & ~ .toggle-container .button-toggle {
-        box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
-    }
+#logo{
+    width: 100px;
+    height: 100px;
 }
 
 // Styles for the 'open' state, if the checkbox is checked
@@ -52,13 +52,6 @@ $transition-delay: 0.05s;
 
     // Making the "X" icon using `:before` and `:after` pseudo-elements
     & ~ .toggle-container .button-toggle {
-        box-shadow: 0 0 0 550px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
-
-        &:hover {
-            box-shadow: 0 0 0 550px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1),
-                0 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
-        }
-
         &:before {
             transform: translateY(-50%) rotate(45deg) scale(1);
         }
@@ -68,20 +61,18 @@ $transition-delay: 0.05s;
         }
     }
 
-    &:focus ~ .toggle-container .button-toggle {
-        box-shadow: 0 0 0 550px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1), 0 0 0 8px rgba(0, 0, 0, 0.1),
-            inset 0 0 0 20px rgba(0, 0, 0, 0.1);
-    }
-
     // Open nav
     & ~ .nav {
         margin-bottom: 100px;
         pointer-events: auto;
         transform: translate(50px, 50px);
+        text-align: center;
+
+        padding-left: 33.33%;
 
         // Restoring nav items from "lines" in the menu icon
         .nav-item {
-            color: #ec7263;
+            color: $color-wit;
             letter-spacing: 0;
             height: 40px;
             line-height: 40px;
@@ -89,6 +80,11 @@ $transition-delay: 0.05s;
             opacity: 1;
             transform: scaleY(1);
             transition: $transition-duration, opacity 0.1s;
+
+            &:hover {
+                transition-duration: 0.02;
+                transform: scale(1.2);
+            }
 
             // Setting delays for the nav items in open transition
             @for $i from 1 through $items {
@@ -105,15 +101,6 @@ $transition-delay: 0.05s;
             &:before {
                 opacity: 0;
             }
-        }
-    }
-
-    // Dummy content
-    & ~ .dummy-content {
-        padding-top: 30px;
-
-        &:before {
-            background-color: rgba(0, 0, 0, 0.3);
         }
     }
 }
@@ -134,7 +121,7 @@ $transition-delay: 0.05s;
 
     // Shadow on hover
     &:hover {
-        box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.1), inset 0 0 0 20px rgba(255, 255, 255, 0.1);
     }
 
     // Making the "X" icon using `:before` and `:after` pseudo-elements
@@ -148,7 +135,7 @@ $transition-delay: 0.05s;
         left: 0;
         width: 100%;
         height: 2px;
-        background-color: #ec7263;
+        background-color: $color-wit;
         border-radius: 5px;
         transition: $transition-duration;
     }
@@ -224,7 +211,7 @@ $transition-delay: 0.05s;
         left: 0;
         width: 100%;
         height: 2px;
-        background-color: #ec7263;
+        background-color: $color-wit;
         transform: translateY(-50%) scaleY(5);
         transition: $transition-duration;
     }
