@@ -1,0 +1,11 @@
+.output{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 0;
+  }
+  
+  .thumbnail {
+    height: 200px;
+  }

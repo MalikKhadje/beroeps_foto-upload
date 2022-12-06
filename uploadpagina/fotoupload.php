@@ -1,3 +1,9 @@
+<?php
+require 'config.php';
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,44 +12,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FotoUpload</title>
+    <link rel="stylesheet" href="header.scss">
+    <link rel="stylesheet" href="upload.css">
 </head>
-
 <body>
-    <div class="container">
-        <div class="upfrm">
-            <?php if (!empty($statusMsg)) { ?>
-            <p class="status-msg">
-                <?php echo $statusMsg; ?>
-            </p>
-            <?php } ?>
 
-            <form action="uploadverwerk.php" method="post" enctype="multipart/form-data">
-                Select Image Files to Upload:
-                <input type="file" name="files[]" multiple>
-                <input type="submit" name="submit" value="UPLOAD">
-            </form>
-        </div>
-        <div class="gallery">
-            <div class="gcon">
-                <?php
-                // Include the database configuration file
-                include_once 'config.php';
+<form action="upload.php" method="post" enctype="multipart/form-data">
+<p>Titel Foto</p>
+<input type="text" name="titelVeld" required>
+<p>Beschrijving</p>
+<input type="text" name="beschrijvingVeld" rows="4" cols="25" required>
+<input type="file" id="files" multiple="multiple" accept="image/jpeg, image/png, image/jpg">
+<output>
+<input type="submit" name="submit" value="Upload">
+</form>
+<script>
+document.querySelector("#files").addEventListener("change", (e) => { 
+  if (window.File && window.FileReader && window.FileList && window.Blob) {
+    const files = e.target.files;
+    const output = document.querySelector("output");
+    output.innerHTML = "";
+    for (let i = 0; i < files.length; i++) {
+       if (!files[i].type.match("image")) continue;
+        const imgReader = new FileReader();
+        imgReader.addEventListener("load", function (event) {
+          const imgFile = event.target;
+          const img = document.createElement("img");
+          img.className = "thumbnail"
+          img.src = imgFile.result
+          output.appendChild(img);
+        });
+        imgReader.readAsDataURL(files[i]);
+       }
+  } else {
+    alert("Your browser does not support File API");
+  }
+});
+</script>
 
-                // Get images from the database
-                $query = $db->query("SELECT * FROM images ORDER BY id DESC");
 
-                if ($query->num_rows > 0) {
-                    while ($row = $query->fetch_assoc()) {
-                        $imageURL = 'uploads/' . $row["file_name"];
-                ?>
-                <img src="<?php echo $imageURL; ?>" alt="" />
-                <?php }
-                } else { ?>
-                <p>No image(s) found...</p>
-                <?php } ?>
-            </div>
-        </div>
-    </div>
+
+   
 </body>
 
 </html>
