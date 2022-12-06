@@ -35,7 +35,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate credentials
     if(empty($username_err) && empty($password_err)){
         // Prepare a select statement
-        $sql = "SELECT ID, Naam, Wachtwoord FROM User WHERE Naam = foto_upload";
+        $sql = "SELECT ID, Naam, Wachtwoord FROM User WHERE Naam = ?";
         
         if($stmt = $mysqli->prepare($sql)){
             // Bind variables to the prepared statement as parameters
