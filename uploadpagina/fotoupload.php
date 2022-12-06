@@ -15,44 +15,55 @@ require 'config.php';
     <link rel="stylesheet" href="header.scss">
     <link rel="stylesheet" href="upload.css">
 </head>
+
 <body>
+    <p>Upload</p>
+    <span>&#8595;</span>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        <input type="file" id="files" multiple="multiple" accept="image/jpeg, image/png, image/jpg" hidden>
+        <label for="files">Kies Image</label>
+        <output></output>
 
-<form action="upload.php" method="post" enctype="multipart/form-data">
-<p>Titel Foto</p>
-<input type="text" name="titelVeld" required>
-<p>Beschrijving</p>
-<input type="text" name="beschrijvingVeld" rows="4" cols="25" required>
-<input type="file" id="files" multiple="multiple" accept="image/jpeg, image/png, image/jpg">
-<output>
-<input type="submit" name="submit" value="Upload">
-</form>
-<script>
-document.querySelector("#files").addEventListener("change", (e) => { 
-  if (window.File && window.FileReader && window.FileList && window.Blob) {
-    const files = e.target.files;
-    const output = document.querySelector("output");
-    output.innerHTML = "";
-    for (let i = 0; i < files.length; i++) {
-       if (!files[i].type.match("image")) continue;
-        const imgReader = new FileReader();
-        imgReader.addEventListener("load", function (event) {
-          const imgFile = event.target;
-          const img = document.createElement("img");
-          img.className = "thumbnail"
-          img.src = imgFile.result
-          output.appendChild(img);
+
+
+
+        <br>
+        <textarea type="text" name="titelVeld" placeholder="Titel" required></textarea>
+        <br>
+        <textarea type="text" name="beschrijvingVeld" placeholder="Beschrijving..." rows="4" cols="25"
+            required></textarea>
+        <br>
+        <input type="submit" name="submit" value="Upload Image" class="button-9" role="button">
+    </form>
+
+
+    <script>
+        document.querySelector("#files").addEventListener("change", (e) => {
+            if (window.File && window.FileReader && window.FileList && window.Blob) {
+                const files = e.target.files;
+                const output = document.querySelector("output");
+                output.innerHTML = "";
+                for (let i = 0; i < files.length; i++) {
+                    if (!files[i].type.match("image")) continue;
+                    const imgReader = new FileReader();
+                    imgReader.addEventListener("load", function (event) {
+                        const imgFile = event.target;
+                        const img = document.createElement("img");
+                        img.className = "thumbnail"
+                        img.src = imgFile.result
+                        output.appendChild(img);
+                    });
+                    imgReader.readAsDataURL(files[i]);
+                }
+            } else {
+                alert("Your browser does not support File API");
+            }
         });
-        imgReader.readAsDataURL(files[i]);
-       }
-  } else {
-    alert("Your browser does not support File API");
-  }
-});
-</script>
+    </script>
 
 
 
-   
+
 </body>
 
 </html>
