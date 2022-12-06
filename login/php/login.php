@@ -122,7 +122,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <span class="invalid-feedback"><?php echo $password_err; ?></span>
             </div>
             <div class="wrap">
-                <input type="submit" class="btn btn-primary" value="Login">
+                <input type="submit" class="login-knop" value="LOGIN">
             </div>
         </form>
     </div>
