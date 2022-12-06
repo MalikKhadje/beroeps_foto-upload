@@ -6,7 +6,7 @@ if (strlen($username) > 0 && strlen($password) > 0) {
     $password = sha1($password);
 
     $query = "SELECT * FROM User";
-    $query .= "WHERE Naam='$username' AND Wachtwoord='$password'";
+    $query .= "WHERE Naam='foto_upload' AND Wachtwoord='foto_upload'";
 
     $result = mysqli_query($mysqli, $query);
 
