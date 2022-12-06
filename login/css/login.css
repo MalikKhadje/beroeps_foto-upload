@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -31,4 +33,6 @@ img {
 .titel {
     text-align: center;
     padding-top: 50px;
+    color: rgb(4, 62, 91);
+    font-family: 'Arimo', sans-serif;
 }
