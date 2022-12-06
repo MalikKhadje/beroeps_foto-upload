@@ -121,7 +121,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <br><br>
             <div class="wrap">
                 <label class="label">WACHTWOORD</label><br>
-                <input type="password" name="Wachtwoord" placeholder="WACHTWOORD" class="form-control input <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
+                <input type="password" name="Naam" placeholder="WACHTWOORD" class="form-control input <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
                 <span class="invalid-feedback"><?php echo $password_err; ?></span>
             </div><br>
             <div class="wrap">
