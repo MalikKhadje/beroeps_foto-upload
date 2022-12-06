@@ -70,6 +70,7 @@ img {
     width: 370px;
     border-radius: 0px;
     border: var(--blauw--) 1px solid;
+    padding: 5px;
 }
 
 .input::placeholder {
