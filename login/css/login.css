@@ -31,7 +31,7 @@ img {
 }
 #logo img {
     position: absolute;
-    width: 45px;
+    width: 5%;
     top: 0px;
     right: 10px;
 }
@@ -41,7 +41,7 @@ img {
     padding-top: 50px;
     color: var(--donkerblauw--);
     font-family: 'Arimo', sans-serif;
-    font-size: 40px;
+    font-size: 100px;
 }
 
 .container {
@@ -59,23 +59,27 @@ img {
 }
 
 .label {
-    font-size: 28px;
+    font-size: 80px;
     color: var(--blauw--);
     font-family: 'Arimo', sans-serif;
     
 }
 
 .input {
-    height: 40px;
-    width: 370px;
+    height: 10%;
+    width: 40%;
     border-radius: 0px;
     border: var(--blauw--) 1px solid;
-    padding: 5px;
+    padding: 1.5%;
+}
+
+.input::placeholder {
+    font-size: 20px;
 }
 
 .login-knop {
-    padding: 16px;
-    font-size: 20px;
+    padding: 1.2%;
+    font-size: 60px;
     border-radius: 5px;
     border: var(--blauw--);
     color: var(--wit--);
