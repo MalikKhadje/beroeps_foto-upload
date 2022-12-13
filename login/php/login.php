@@ -35,7 +35,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate credentials
     if(empty($username_err) && empty($password_err)){
         // Prepare a select statement
-        $sql = "SELECT ID, Naam, Wachtwoord FROM User WHERE Naam = ?";
+        $sql = "SELECT ID, Naam, Wachtwoord FROM User WHERE Naam = foto_upload";
         
         if($stmt = $mysqli->prepare($sql)){
             // Bind variables to the prepared statement as parameters
@@ -94,10 +94,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="stylesheet" href="../css/login.css">
     <meta charset="UTF-8">
     <title>Login</title>
-    <style>
-        body{ font: 14px sans-serif; }
-        .wrapper{ width: 360px; padding: 20px; }
-    </style>
 </head>
 <div id="logo">
         <img src="../images/logo.png" class="logo" alt="">
