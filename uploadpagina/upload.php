@@ -1,37 +1,33 @@
 <?php
 // Include the database configuration file
 include 'config.php';
-$statusMsg = '';
 
-// File upload path
-$targetDir = "image/";
-$fileName = basename($_FILES["file"]["name"]);
-$targetFilePath = $targetDir . $fileName;
-$fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
 
-if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
-    // Allow certain file formats
-    $allowTypes = array('jpg','png','jpeg','gif','pdf');
-    if(in_array($fileType, $allowTypes)){
-        // Upload file to server
-        if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
-            // Insert image file name into database
-            $insert = $db->query("INSERT into Posts (Foto, Titel, Beschrijving, Aangemaakt_op) VALUES ('".$fileName."', NOW())");
-            if($insert){
-                $statusMsg = "The file ".$fileName. " has been uploaded successfully.";
-            }else{
-                $statusMsg = "File upload failed, please try again.";
-            } 
-        }else{
-            $statusMsg = "Sorry, there was an error uploading your file.";
-        }
-    }else{
-        $statusMsg = 'Sorry, only JPG, JPEG, PNG, GIF, & PDF files are allowed to upload.';
+
+if(isset($_POST['upload'])){
+    $foto = addslashes(file_get_contents($_FILES["Foto"]["tmp_name"]));
+    $titel = $_POST['Titel'];
+    $beschrijving = $_POST['Beschrijving'];
+
+    $query = "INSERT INTO `Posts`(`Foto`,`Titel`,`Beschrijving`) VALUES ('$foto','$titel','$beschrijving')";
+
+    $query_run = mysqli_query($connection, $query);
+
+    if($query_run)
+    {
+        echo '<script type="text/javascript">alert("Alles is geupload")</script>';
     }
-}else{
-    $statusMsg = 'Please select a file to upload.';
+    else{
+        echo '<script type="text/javascript">alert("Upload is verkeerd gegaan")</script>';
+    }
+
 }
 
-// Display status message
-echo $statusMsg;
+
 ?>
+
+
+ 
+       
+    
+  

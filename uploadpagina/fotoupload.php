@@ -1,6 +1,5 @@
 <?php
 require 'config.php';
-
 ?>
 
 
@@ -18,9 +17,9 @@ require 'config.php';
 
 <body>
     <p>Upload</p>
-    <span>&#8595;</span>
-    <form action="upload.php" method="post" enctype="multipart/form-data">
-        <input type="file" id="files" multiple="multiple" accept="image/jpeg, image/png, image/jpg" hidden>
+    <span style="width: 200px; height: 500px;">&#8595;</span>
+    <!-- <form action="upload.php" method="post" enctype="multipart/form-data">
+        <input name="file" type="file" id="files" multiple="multiple" accept="image/jpeg, image/png, image/jpg" hidden>
         <label for="files">Kies Image</label>
         <output></output>
 
@@ -33,9 +32,27 @@ require 'config.php';
         <textarea type="text" name="beschrijvingVeld" placeholder="Beschrijving..." rows="4" cols="25"
             required></textarea>
         <br>
-        <input type="submit" name="submit" value="Upload Image" class="button-9" role="button">
-    </form>
+        <input type="submit" name="submit" value="Upload" class="button-9" role="button">
+    </form> -->
 
+  <form action="upload.php" method="POST" enctype="multipart/form-data">
+
+
+  <input name="Foto" type="file" id="files" multiple="multiple" accept="image/jpeg, image/png, image/jpg" hidden>
+        <label for="files">Kies Image</label>
+        <output></output>
+
+  <!-- <p>Kies een image</p>
+  <input type="file" name="Foto" id="Foto"/><br> -->
+
+  <p>Kies een image</p>
+  <input type="text" name="Titel" placeholder="Titel" required/><br>
+
+  <p>Kies een image</p>
+  <input type="text" name="Beschrijving" placeholder="Beschrijving..." rows="4" cols="25" required/><br>
+
+ <input type="submit" name="upload" value="Upload Image/Data"/>
+</form>
 
     <script>
         document.querySelector("#files").addEventListener("change", (e) => {
@@ -67,3 +84,4 @@ require 'config.php';
 </body>
 
 </html>
+
