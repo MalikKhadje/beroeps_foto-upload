@@ -102,6 +102,11 @@ img {
     color: var(--blauw--);
 }
 
+.alert-danger {
+    font-family: 'Arimo', sans-serif;
+    color: var(--blauw--);
+}
+
 
 
 
