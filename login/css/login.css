@@ -97,6 +97,11 @@ img {
     transform: scale(1.05);
 }
 
+.invalid-feedback {
+    font-family: 'Arimo', sans-serif;
+    color: var(--blauw--);
+}
+
 
 
 
