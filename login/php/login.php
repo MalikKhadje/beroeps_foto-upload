@@ -19,23 +19,23 @@ $username_err = $password_err = $login_err = "";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
  
     // Check if username is empty
-    if(empty(trim($_POST["Naam"]))){
+    if(empty(trim($_POST["username"]))){
         $username_err = "Please enter username.";
     } else{
-        $username = trim($_POST["Naam"]);
+        $username = trim($_POST["username"]);
     }
     
     // Check if password is empty
-    if(empty(trim($_POST["Wachtwoord"]))){
+    if(empty(trim($_POST["password"]))){
         $password_err = "Please enter your password.";
     } else{
-        $password = trim($_POST["Wachtwoord"]);
+        $password = trim($_POST["password"]);
     }
     
     // Validate credentials
     if(empty($username_err) && empty($password_err)){
         // Prepare a select statement
-        $sql = "SELECT ID, Naam, Wachtwoord FROM User WHERE Naam = foto_upload";
+        $sql = "SELECT id, username, password FROM users WHERE username = ?";
         
         if($stmt = $mysqli->prepare($sql)){
             // Bind variables to the prepared statement as parameters
@@ -60,8 +60,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;
-                            $_SESSION["ID"] = $id;
-                            $_SESSION["Naam"] = $username;                            
+                            $_SESSION["id"] = $id;
+                            $_SESSION["username"] = $username;                            
                             
                             // Redirect user to welcome page
                             header("location: poep.php");
@@ -111,13 +111,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <form action="loginverwerk.php <?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="wrap">
                 <label class="label">NAAM</label><br>
-                <input type="text" name="Naam"  placeholder="NAAM" class="form-control input <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
+                <input type="text" name="username"  placeholder="NAAM" class="form-control input <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
                 <span class="invalid-feedback"><?php echo $username_err; ?></span>
             </div>
             <br><br>
             <div class="wrap">
                 <label class="label">WACHTWOORD</label><br>
-                <input type="password" name="Naam" placeholder="WACHTWOORD" class="form-control input <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
+                <input type="password" name="password" placeholder="WACHTWOORD" class="form-control input <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
                 <span class="invalid-feedback"><?php echo $password_err; ?></span>
             </div><br>
             <div class="wrap">
