@@ -177,10 +177,13 @@ html {
   transition-delay: 0.15s;
 }
 .nav-item:nth-child(1) {
-  letter-spacing: -8px;
+  letter-spacing: -4px;
 }
 .nav-item:nth-child(2) {
-  letter-spacing: -7px;
+  letter-spacing: -6px;
+}
+.nav-item:nth-child(3) {
+  letter-spacing: -4.5px;
 }
 .nav-item:nth-child(n+4) {
   letter-spacing: -8px;
@@ -330,4 +333,43 @@ html {
 #t-5:checked ~ .testimonials label[for=t-4],
 #t-5:checked ~ .testimonials label[for=t-5] {
   z-index: 4;
+}
+
+@media only screen and (max-width: 450px) {
+  .testimonials {
+    margin: 50px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 300px;
+    perspective: 1000px;
+    overflow: hidden;
+  }
+  .testimonials .item {
+    width: 300px;
+    height: 250px;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: #0a0220;
+    position: absolute;
+    top: 0;
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.4s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    cursor: pointer;
+  }
+  .testimonials .item img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 50%;
+    border: 13px solid #3b344d;
+  }
 }/*# sourceMappingURL=Home.css.map */
