@@ -71,6 +71,8 @@ img {
     border-radius: 0px;
     border: var(--blauw--) 1px solid;
     padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .input::placeholder {
