@@ -30,6 +30,7 @@ $query = "SELECT * FROM Posts";
                     <th>Titel</th>
                     <th>Beschrijving</th>
                     <th>Aangemaakt Op</th>
+                    <th>Details</th>
                 </tr>
             </thead>
             <?php
@@ -43,11 +44,11 @@ $query = "SELECT * FROM Posts";
             {
                 ?>
                 <tr>
-                    <td> <?php echo '<img src="data:image;base64,'.base64_encode($row['image']).'" alt="Image" style="width: 100px; height: 100px" >'; ?> </td>
+                    <td> <?php echo '<img src="data:image;base64,'.base64_encode($row['Foto']).'" alt="Image" style="width: 100px; height: 100px" >'; ?> </td>
                     <td> <?php echo $row['Titel'] ?> </td>
                     <td> <?php echo $row['Beschrijving'] ?> </td>
                     <td> <?php echo $row['Aangemaakt_op'] ?> </td>
-                    <td> <?php echo '<a href="detail.php?id=' . $row['ID'] . '">Detail</a>' ?>  </td>
+                    <td> <?php echo '<a href="detail.php?id=' . $row['ID'] . '">Details</a>' ?>  </td>
                 </tr>
                 <?php
             }
