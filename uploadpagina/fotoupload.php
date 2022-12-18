@@ -1,6 +1,4 @@
-<?php
-require 'config.php';
-?>
+
 
 
 <!DOCTYPE html>
@@ -14,7 +12,18 @@ require 'config.php';
     <link rel="stylesheet" href="header.scss">
     <link rel="stylesheet" href="upload.css">
 </head>
+<?php
+// session_start();
+// if (isset($_SESSION["token"]) && $_SESSION["token"] == $_POST["csrf_token"]) {
+//     // het token klopt
+// } else {
+//     // het token klopt niet
+// }
 
+
+
+require 'config.php';
+?>
 <body>
     <p>Upload</p>
     <span style="width: 200px; height: 500px;">&#8595;</span>
@@ -35,52 +44,29 @@ require 'config.php';
         <input type="submit" name="submit" value="Upload" class="button-9" role="button">
     </form> -->
 
-  <form action="upload.php" method="POST" enctype="multipart/form-data">
+  <form method="post" enctype="multipart/form-data" action="upload.php">
 
 
   <input name="Foto" type="file" id="files" multiple="multiple" accept="image/jpeg, image/png, image/jpg" hidden>
-        <label for="files">Kies Image</label>
+        <label name="Foto" for="files">Kies Image</label>
         <output></output>
 
   <!-- <p>Kies een image</p>
   <input type="file" name="Foto" id="Foto"/><br> -->
 
-  <p>Kies een image</p>
-  <input type="text" name="Titel" placeholder="Titel" required/><br>
 
-  <p>Kies een image</p>
-  <input type="text" name="Beschrijving" placeholder="Beschrijving..." rows="4" cols="25" required/><br>
+  <textarea type="text" name="Titel" placeholder="Titel" required/></textarea><br>
+
+  
+  <textarea type="text" name="Beschrijving" placeholder="Beschrijving..." rows="4" cols="25" required/></textarea><br>
 
  <input type="submit" name="upload" value="Upload Image/Data"/>
 </form>
 
-    <script>
-        document.querySelector("#files").addEventListener("change", (e) => {
-            if (window.File && window.FileReader && window.FileList && window.Blob) {
-                const files = e.target.files;
-                const output = document.querySelector("output");
-                output.innerHTML = "";
-                for (let i = 0; i < files.length; i++) {
-                    if (!files[i].type.match("image")) continue;
-                    const imgReader = new FileReader();
-                    imgReader.addEventListener("load", function (event) {
-                        const imgFile = event.target;
-                        const img = document.createElement("img");
-                        img.className = "thumbnail"
-                        img.src = imgFile.result
-                        output.appendChild(img);
-                    });
-                    imgReader.readAsDataURL(files[i]);
-                }
-            } else {
-                alert("Your browser does not support File API");
-            }
-        });
-    </script>
 
 
 
-
+<script src="upload.js"></script>
 </body>
 
 </html>
