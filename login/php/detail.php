@@ -14,7 +14,7 @@
 <div id="logo">
         <img src="../images/logo.png" class="logo" alt="">
     </div>
-<h1 class="titel">LOGIN</h1>
+<h1 class="titel">DETAILS</h1>
 
 <?php
 
@@ -38,7 +38,7 @@ if (mysqli_num_rows($result) > 0)
     // er hoeft maar 1 item uitgelezen te worden
     $item = mysqli_fetch_assoc($result);
 
-    echo '<img src="data:image;base64,'.base64_encode($item['Foto']).'" alt="Image" style="width: 400px; height: 400px; text-align: center;">';?><br><?php
+    echo '<img src="data:image;base64,'.base64_encode($item['Foto']).'" alt="Image" style="width: 400px; height: 400px;">';?><br><?php
     echo $item['Titel'] . "<br/>";
     echo $item['Beschrijving'] . "<br/>";
     echo $item['Aangemaakt_op'] . "<br/>";
