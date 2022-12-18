@@ -29,7 +29,7 @@ if (mysqli_num_rows($result) > 0)
     // er hoeft maar 1 item uitgelezen te worden
     $item = mysqli_fetch_assoc($result);
 
-    echo $item['Foto'] . "<br/>";
+    // echo $item['Foto'] . "<br/>";
     echo $item['Titel'] . "<br/>";
     echo $item['Beschrijving'] . "<br/>";
     echo $item['Aangemaakt_op'] . "<br/>";
