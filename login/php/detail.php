@@ -22,23 +22,22 @@ echo "ID van het agenda-item is: " . $id . "<br/>";
 $query = "SELECT * FROM Posts WHERE ID = " . $id;
 
 // voer de query uit
-$result = mysqli_query($mysqli, $query);
+$connection = mysqli_connect("localhost", "foto_upload", "foto_upload");
+$db = mysqli_select_db($connection, 'foto_upload');
 
-if (mysqli_num_rows($result) > 0)
+$query = " SELECT * FROM `Posts` ";
+$query_run = mysqli_query($connection, $query);
+
+while($row = mysqli_fetch_array($query_run))
 {
-    // er hoeft maar 1 item uitgelezen te worden
-    $item = mysqli_fetch_assoc($result);
-
-    // echo $item['Foto'] . "<br/>";
-    echo $item['Titel'] . "<br/>";
-    echo $item['Beschrijving'] . "<br/>";
-    echo $item['Aangemaakt_op'] . "<br/>";
-}
-
-// als er niks gevonden is
-else
-{
-    echo "Er is geen record met ID: " . $id . "<br/>";
+    ?>
+   
+        <?php echo '<img src="data:image;base64,'.base64_encode($row['Foto']).'" alt="Image" style="width: 100px; height: 100px" >'; ?><br>
+        <?php echo $row['Titel'] ?> <br>
+        <?php echo $row['Beschrijving'] ?> <br>
+        <?php echo $row['Aangemaakt_op'] ?> <br>
+   
+    <?php
 }
 
 echo "<a href='logout.php'>LOG UIT</a>";
