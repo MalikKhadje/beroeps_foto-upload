@@ -30,21 +30,7 @@ $query = "SELECT * FROM Posts";
 </head> 
 
 <h1>OVERZICHT</h1>
-<div class="container">
-<div class="form-group">
-    <input type="text" id="myInput" placeholder="Zoek..." class="form-control">
-</div>
-</div>
-<script type="text/javascript">
-    $(document).ready(function() {
-        $("#myInput").on("keyup", function() {
-        let value =$(this).val().toLowerCase();
-        $("#myTable tr").filter(function() {
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-        });
-    });
-});
-</script>
+
 
 <?php
 
@@ -68,7 +54,6 @@ if (mysqli_num_rows($result) > 0)
 
     {
       ?>
-      <tbody id="myTable">
         <?php
         // toon de gegevens van het item in een tabelrij
         echo "<tr>";
@@ -79,7 +64,6 @@ if (mysqli_num_rows($result) > 0)
              echo "<td>" . "<a href='detail.php?id=" . $item['ID'] . "'>Detail</a> </td>";
         echo "</tr>";
         ?>
-        </tbody>
         <?php
     }
 
