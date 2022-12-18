@@ -13,7 +13,7 @@
 require_once 'session.inc.php';
 require 'config.php';
 
-$id = $_GET['id'];
+$id = $_GET['ID'];
 
 // toon het id op het scherm
 echo "ID van het agenda-item is: " . $id . "<br/>";
