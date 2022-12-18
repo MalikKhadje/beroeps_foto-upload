@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
 
     <title>Detail</title>
 
@@ -33,10 +33,10 @@ if (mysqli_num_rows($result) > 0)
     // er hoeft maar 1 item uitgelezen te worden
     $item = mysqli_fetch_assoc($result);
 
-    echo $item['Foto'] . "<br/>";
+    echo '<img src="data:image;base64,'.base64_encode($item['Foto']).'" alt="Image" style="width: 100px; height: 100px" >';
     echo $item['Titel'] . "<br/>";
     echo $item['Beschrijving'] . "<br/>";
-    echo $item['Aangemaakt Op'] . "<br/>";
+    echo $item['Aangemaakt_op'] . "<br/>";
 }
 
 // als er niks gevonden is
