@@ -1,18 +1,59 @@
 <?php
 // Include the database configuration file
-require 'config.php';
+// require 'config.php';
+
+// $connection = mysqli_connect("localhost", "foto_upload", "foto_upload");
+// $db = mysqli_select_db($connection, 'foto_upload');
+
+
+// if(isset($POST['upload']))
+// {
+//     $file = addslashes(file_get_contents($_FILES["Foto"]["tmp_name"]));
+//     $Titel = $_POST['Titel'];
+//     $Beschrijving = $_POST['Beschrijving'];
+
+//     $query = "INSERT INTO Posts ('Foto', 'Titel', 'Beschrijving') VALUES ('$file', '$Titel', '$Beschrijving')";
+    
+//     $query_run = mysqli_query($connection,$query);
+
+//     if($query_run)
+//     {
+//         echo '<script type="text/javascript"> alert("Succesvol geupload") </script>'
+//     }
+//     else
+//     {
+//         echo '<script type="text/javascript"> alert("OnSuccesvol geupload") </script>'
+//     }
+// }
 
 
 
 
 
 
+$connect = mysqli_connect("localhost", "foto_upload", "foto_upload", "foto_upload");  
+if ($connect->connect_error) {
+    die("Connection failed: " . $connect->connect_error);
+}
+if(isset($_POST["upload"]))  
+{  
+     $file = addslashes(file_get_contents($_FILES["Foto"]["tmp_name"]));  
+     $Titel = $_POST['Titel'];
+     $Beschrijving = $_POST['Beschrijving'];
+
+     $query = "INSERT INTO Posts(Foto, Titel, Beschrijving) VALUES ('$file', '$Titel', '$Beschrijving')";  
+     if(mysqli_query($connect, $query))  
+     {  
+          echo '<script>alert("Inserted into Database")</script>';  
+     }  
+     else{
+        echo '<script>alert("NOT Inserted into Database")</script>'; 
+     }
+    }
 
 
-
-
-
-
+include "redirect_form.php";
+    
 
 
 
