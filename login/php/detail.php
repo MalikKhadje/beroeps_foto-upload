@@ -24,24 +24,22 @@ $query = "SELECT * FROM users WHERE ID = " . $id;
 // voer de query uit
 $result = mysqli_query($mysqli, $query);
 
-// if (mysqli_num_rows($result) > 0)
-// {
-//     // er hoeft maar 1 item uitgelezen te worden
-//     $item = mysqli_fetch_assoc($result);
+if (mysqli_num_rows($result) > 0)
+{
+    // er hoeft maar 1 item uitgelezen te worden
+    $item = mysqli_fetch_assoc($result);
 
-//     echo $item['Onderwerp'] . "<br/>";
-//     echo $item['Inhoud'] . "<br/>";
-//     echo $item['Begindatum'] . "<br/>";
-//     echo $item['Einddatum'] . "<br/>";
-//     echo $item['Prioriteit'] . "<br/>";
-//     echo $item['Status'] . "<br/>";
-// }
+    echo $item['Foto'] . "<br/>";
+    echo $item['Titel'] . "<br/>";
+    echo $item['Beschrijving'] . "<br/>";
+    echo $item['Aangemaakt_op'] . "<br/>";
+}
 
-// // als er niks gevonden is
-// else
-// {
-//     echO "Er is geen record met ID: " . $id . "<br/>";
-// }
+// als er niks gevonden is
+else
+{
+    echo "Er is geen record met ID: " . $id . "<br/>";
+}
 
 echo "<a href='logout.php'>LOG UIT</a>";
 ?>
