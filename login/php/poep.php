@@ -57,7 +57,7 @@ if (mysqli_num_rows($result) > 0)
         <?php
         // toon de gegevens van het item in een tabelrij
         echo "<tr>";
-             echo "<td>" . $item['Foto'] . "</td>";
+            //  echo "<td>" . $item['Foto'] . "</td>";
              echo "<td>" . $item['Titel'] . "</td>";
              echo "<td>" . $item['Beschrijving'] . "</td>";
              echo "<td>" . $item['Aangemaakt_op'] . "</td>";
