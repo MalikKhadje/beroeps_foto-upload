@@ -19,7 +19,7 @@ $id = $_GET['ID'];
 echo "ID van het agenda-item is: " . $id . "<br/>";
 
 // maak de query om gegevens van het item op te halen
-$query = "SELECT * FROM users WHERE ID = " . $id;
+$query = "SELECT * FROM Posts WHERE ID = " . $id;
 
 // voer de query uit
 $result = mysqli_query($mysqli, $query);
