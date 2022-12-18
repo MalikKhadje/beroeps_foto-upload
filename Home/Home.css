@@ -10,6 +10,12 @@
 body,
 html {
   background-color: #efefef;
+  color: black;
+}
+
+.dark-mode {
+  background-color: #343F4F;
+  color: #efefef;
 }
 
 .container {
@@ -25,6 +31,21 @@ html {
   position: absolute;
   left: -100%;
   top: -100%;
+}
+
+#dark-mode {
+  position: absolute;
+  top: 25px;
+  right: 80px;
+  z-index: 1;
+  background-color: #efefef;
+  color: #003559;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 50px;
+  font-weight: bold;
 }
 
 #logo {
@@ -45,14 +66,14 @@ html {
 #toggle:checked ~ .toggle-container .button-toggle:after {
   transform: translateY(-50%) rotate(-45deg) scale(1);
 }
-#toggle:checked ~ .nav {
+#toggle:checked ~ #nav-center .nav {
   margin-bottom: 100px;
   pointer-events: auto;
-  transform: translate(50px, 50px);
+  transform: translate(0px, 50px);
   text-align: center;
-  padding-left: 33.33%;
+  padding-left: 45%;
 }
-#toggle:checked ~ .nav .nav-item {
+#toggle:checked ~ #nav-center .nav .nav-item {
   color: #051738;
   letter-spacing: 0;
   height: 40px;
@@ -63,35 +84,35 @@ html {
   transition: 0.5s, opacity 0.1s;
   font-weight: bold;
 }
-#toggle:checked ~ .nav .nav-item:hover {
+#toggle:checked ~ #nav-center .nav .nav-item:hover {
   transition-duration: 0.02;
   transform: scale(1.2);
 }
-#toggle:checked ~ .nav .nav-item:nth-child(1) {
+#toggle:checked ~ #nav-center .nav .nav-item:nth-child(1) {
   transition-delay: 0.15s;
 }
-#toggle:checked ~ .nav .nav-item:nth-child(1):before {
+#toggle:checked ~ #nav-center .nav .nav-item:nth-child(1):before {
   transition-delay: 0.15s;
 }
-#toggle:checked ~ .nav .nav-item:nth-child(2) {
+#toggle:checked ~ #nav-center .nav .nav-item:nth-child(2) {
   transition-delay: 0.1s;
 }
-#toggle:checked ~ .nav .nav-item:nth-child(2):before {
+#toggle:checked ~ #nav-center .nav .nav-item:nth-child(2):before {
   transition-delay: 0.1s;
 }
-#toggle:checked ~ .nav .nav-item:nth-child(3) {
+#toggle:checked ~ #nav-center .nav .nav-item:nth-child(3) {
   transition-delay: 0.05s;
 }
-#toggle:checked ~ .nav .nav-item:nth-child(3):before {
+#toggle:checked ~ #nav-center .nav .nav-item:nth-child(3):before {
   transition-delay: 0.05s;
 }
-#toggle:checked ~ .nav .nav-item:nth-child(4) {
+#toggle:checked ~ #nav-center .nav .nav-item:nth-child(4) {
   transition-delay: 0s;
 }
-#toggle:checked ~ .nav .nav-item:nth-child(4):before {
+#toggle:checked ~ #nav-center .nav .nav-item:nth-child(4):before {
   transition-delay: 0s;
 }
-#toggle:checked ~ .nav .nav-item:before {
+#toggle:checked ~ #nav-center .nav .nav-item:before {
   opacity: 0;
 }
 
@@ -202,174 +223,87 @@ html {
   transition: 0.5s;
 }
 
-.slider {
+.wrapper {
+  display: flex;
   width: 100%;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.slider input {
+.wrapper i {
+  top: 50%;
+  height: 44px;
+  width: 44px;
+  color: #343f4f;
+  cursor: pointer;
+  font-size: 1.15rem;
+  position: absolute;
+  text-align: center;
+  line-height: 44px;
+  background: #fff;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+
+.wrapper i:active {
+  transform: translateY(-50%) scale(0.9);
+}
+
+.wrapper i:hover {
+  background: #f2f2f2;
+}
+
+.wrapper i:first-child {
+  left: -22px;
   display: none;
 }
 
-.testimonials {
-  margin: 50px 0px 0px 0px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  min-height: 350px;
-  perspective: 1000px;
-  overflow: hidden;
+.wrapper i:last-child {
+  right: -22px;
 }
-.testimonials .item {
-  width: 400px;
-  height: 300px;
-  padding: 30px;
-  border-radius: 5px;
-  background-color: #0a0220;
-  position: absolute;
-  top: 0;
-  box-sizing: border-box;
-  text-align: center;
-  transition: transform 0.4s;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+.wrapper .carousel {
+  font-size: 0px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+
+.carousel.dragging {
+  cursor: -webkit-grab;
+  cursor: grab;
+  scroll-behavior: auto;
+}
+
+.carousel.dragging img {
+  pointer-events: none;
+}
+
+.carousel img {
+  height: 340px;
+  -o-object-fit: cover;
+     object-fit: cover;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  cursor: pointer;
-}
-.testimonials .item img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 50%;
-  border: 13px solid #3b344d;
+  margin-left: 14px;
+  width: 33.3333333333%;
 }
 
-.testimonials .item .testimonials .item p {
-  color: #ddd;
+.carousel img:first-child {
+  margin-left: 0px;
 }
 
-.testimonials .item h2 {
-  font-size: 14px;
-}
-
-.dots {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.dots label {
-  height: 5px;
-  width: 5px;
-  border-radius: 50%;
-  cursor: pointer;
-  background-color: #413b52;
-  margin: 7px;
-  transition-duration: 0.2s;
-}
-
-#t-1:checked ~ .dots label[for=t-1],
-#t-2:checked ~ .dots label[for=t-2],
-#t-3:checked ~ .dots label[for=t-3],
-#t-4:checked ~ .dots label[for=t-4],
-#t-5:checked ~ .dots label[for=t-5] {
-  transform: scale(2);
-  background-color: #fff;
-}
-
-#t-1:checked ~ .dots label[for=t-2],
-#t-2:checked ~ .dots label[for=t-1],
-#t-2:checked ~ .dots label[for=t-3],
-#t-3:checked ~ .dots label[for=t-2],
-#t-3:checked ~ .dots label[for=t-4],
-#t-4:checked ~ .dots label[for=t-3],
-#t-4:checked ~ .dots label[for=t-5],
-#t-5:checked ~ .dots label[for=t-4] {
-  transform: scale(1.5);
-}
-
-#t-1:checked ~ .testimonials label[for=t-3],
-#t-2:checked ~ .testimonials label[for=t-4],
-#t-3:checked ~ .testimonials label[for=t-5],
-#t-4:checked ~ .testimonials label[for=t-1],
-#t-5:checked ~ .testimonials label[for=t-2] {
-  transform: translate3d(600px, 0, -180px) rotateY(-25deg);
-  z-index: 2;
-}
-
-#t-1:checked ~ .testimonials label[for=t-2],
-#t-2:checked ~ .testimonials label[for=t-3],
-#t-3:checked ~ .testimonials label[for=t-4],
-#t-4:checked ~ .testimonials label[for=t-5],
-#t-5:checked ~ .testimonials label[for=t-1] {
-  transform: translate3d(300px, 0, -90px) rotateY(-15deg);
-  z-index: 3;
-}
-
-#t-2:checked ~ .testimonials label[for=t-1],
-#t-3:checked ~ .testimonials label[for=t-2],
-#t-4:checked ~ .testimonials label[for=t-3],
-#t-5:checked ~ .testimonials label[for=t-4],
-#t-1:checked ~ .testimonials label[for=t-5] {
-  transform: translate3d(-300px, 0, -90px) rotateY(15deg);
-  z-index: 3;
-}
-
-#t-3:checked ~ .testimonials label[for=t-1],
-#t-4:checked ~ .testimonials label[for=t-2],
-#t-5:checked ~ .testimonials label[for=t-3],
-#t-2:checked ~ .testimonials label[for=t-5],
-#t-1:checked ~ .testimonials label[for=t-4] {
-  transform: translate3d(-600px, 0, -180px) rotateY(25deg);
-}
-
-#t-1:checked ~ .testimonials label[for=t-1],
-#t-2:checked ~ .testimonials label[for=t-2],
-#t-3:checked ~ .testimonials label[for=t-3],
-#t-4:checked ~ .testimonials label[for=t-4],
-#t-5:checked ~ .testimonials label[for=t-4],
-#t-5:checked ~ .testimonials label[for=t-5] {
-  z-index: 4;
-}
-
-@media only screen and (max-width: 450px) {
-  .testimonials {
-    margin: 50px 0px 0px 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    min-height: 300px;
-    perspective: 1000px;
-    overflow: hidden;
+@media screen and (max-width: 900px) {
+  .carousel img {
+    width: 50%;
   }
-  .testimonials .item {
-    width: 300px;
-    height: 250px;
-    padding: 30px;
-    border-radius: 5px;
-    background-color: #0a0220;
-    position: absolute;
-    top: 0;
-    box-sizing: border-box;
-    text-align: center;
-    transition: transform 0.4s;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    cursor: pointer;
-  }
-  .testimonials .item img {
+}
+@media screen and (max-width: 550px) {
+  .carousel img {
     width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    border-radius: 50%;
-    border: 13px solid #3b344d;
   }
 }/*# sourceMappingURL=Home.css.map */
