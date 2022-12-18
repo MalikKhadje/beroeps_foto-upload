@@ -86,12 +86,12 @@ carousel.addEventListener("touchend", dragStop);
 // }
 
 function myFunction() {
-    let elements = document.querySelectorAll('div');
- 
+    let elements = document.querySelectorAll('div, button');
+
     for (let i = 0; i < elements.length; i++) {
-       elements[i].classList.toggle("dark-mode");
+        elements[i].classList.toggle("dark-mode");
     }
- }
+}
 
 
 // ************************************************************* ...
