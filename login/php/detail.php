@@ -5,11 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
-
+    <link rel="stylesheet" href="../css/detail.css">
+    
     <title>Detail</title>
 
 </head>
+
+<div id="logo">
+        <img src="../images/logo.png" class="logo" alt="">
+    </div>
+<h1 class="titel">LOGIN</h1>
 
 <?php
 
@@ -19,8 +24,8 @@ require 'config.php';
 
 $id = $_GET['id'];
 
-// toon het id op het scherm
-echo "ID van het agenda-item is: " . $id . "<br/>";
+// // toon het id op het scherm
+// echo "ID van het agenda-item is: " . $id . "<br/>";
 
 // maak de query om gegevens van het item op te halen
 $query = "SELECT * FROM Posts WHERE ID = " . $id;
