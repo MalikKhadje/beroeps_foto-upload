@@ -57,7 +57,7 @@ body {
 #logo {
     position: absolute;
     top: 5px;
-    right: 10px;
+    right: 20px;
     z-index: 1;
 }
 @media only screen and (max-width: 120px) {
@@ -255,7 +255,7 @@ body {
     text-align: center;
     color: var(--donkerblauw--);
     font-family: "Arimo", sans-serif;
-    font-size: 10vw;
+    font-size: 8vw;
 }
 
 #foto {
@@ -281,20 +281,21 @@ body {
     text-align: center;
     color: var(--donkerblauw--);
     font-family: "Arimo", sans-serif;
-    font-size: 8vw;
+    font-size: 6vw;
 }
 
 .datum {
     padding-top: 40px;
+    padding-bottom: 40px;
     text-align: center;
     color: var(--donkerblauw--);
     font-family: "Arimo", sans-serif;
-    font-size: 5vw;
+    font-size: 4vw;
 }
 
 .terug-knop {
     padding: 30px;
-    font-size: 60px;
+    font-size: 3vw;
     border-radius: 8px;
     border: var(--blauw--);
     color: var(--wit--);
