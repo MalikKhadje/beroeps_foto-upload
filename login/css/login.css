@@ -83,6 +83,7 @@ img {
 .login-knop {
     width: 200px;
     font-size: 60px;
+    padding: 30px;
     font-weight: 600;
     color: #fff;
     cursor: pointer;
@@ -91,7 +92,7 @@ img {
     text-align:center;
     border: none;
     background-size: 300% 100%;
-    
+
     border-radius: 50px;
     moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
@@ -116,7 +117,7 @@ img {
 }
 
 .login-knop.color-1 {
-    background-image: linear-gradient(to right, #00465f, #0078c3, #00cbfe, #00e8f0);
+    background-image: linear-gradient(to right, #00465f, #005e98, #006d95, #007aab);
     box-shadow: 0 4px 15px 0 rgba(0, 109, 119, 0.75);
 }
 
