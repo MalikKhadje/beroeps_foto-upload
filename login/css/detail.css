@@ -294,16 +294,42 @@ body {
 }
 
 .terug-knop {
-    padding: 15px;
-    font-size: 3vw;
-    border-radius: 5px;
-    border: var(--blauw--);
-    color: var(--wit--);
-    background-color: var(--blauw--);
-    font-family: 'Arimo', sans-serif;
-    transition: ease-in-out 0.2s;
+    width: 200px;
+    font-size: 35px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 15px;
+    moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.knop {
+    text-align: center;
 }
 
 .terug-knop:hover {
+    background-position: 100% 0;
+    moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    letter-spacing: 5px;
     transform: scale(1.05);
+}
+
+.terug-knop:focus {
+    outline: none;
+}
+
+.terug-knop.color-1 {
+    background-image: linear-gradient(to right, #00465f, #006c9b, #007eac, #00597c);
+    box-shadow: 0 4px 15px 0 rgb(0, 72, 108);
 }
