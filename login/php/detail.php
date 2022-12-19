@@ -78,7 +78,7 @@ if (mysqli_num_rows($result) > 0) {
 <div class="wrap">
     <a href="poep.php"><input type="submit" class="terug-knop" value="TERUG"></a>
 </div>
-
+<br><br>
 </div>
 <?php
 }
