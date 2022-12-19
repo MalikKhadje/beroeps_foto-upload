@@ -286,7 +286,7 @@ body {
 
 .datum {
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 80px;
     text-align: center;
     color: var(--donkerblauw--);
     font-family: "Arimo", sans-serif;
@@ -296,7 +296,7 @@ body {
 .terug-knop {
     padding: 15px;
     font-size: 3vw;
-    border-radius: 8px;
+    border-radius: 5px;
     border: var(--blauw--);
     color: var(--wit--);
     background-color: var(--blauw--);
