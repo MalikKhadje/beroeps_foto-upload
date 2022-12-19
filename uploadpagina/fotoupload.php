@@ -1,10 +1,5 @@
 <?php
-session_start();
-if (isset($_SESSION["token"]) && $_SESSION["token"] == $_POST["csrf_token"]) {
-    // het token klopt
-} else {
-    // het token klopt niet
-}
+require_once 'session.inc.php';
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +9,7 @@ if (isset($_SESSION["token"]) && $_SESSION["token"] == $_POST["csrf_token"]) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FotoUpload</title>
+    <title>Upload</title>
     <link rel="stylesheet" href="header.scss">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
