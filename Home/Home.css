@@ -1,4 +1,4 @@
-@import url();
+@import url("https://fonts.googleapis.com/css2?family=Arimo:wght@700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -15,15 +15,19 @@ html {
   height: 100%;
   background-color: #efefef;
   color: black;
+  overflow-x: hidden;
 }
 
 .container {
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   width: 100%;
   height: auto;
   background-color: #efefef;
   overflow: hidden;
   margin-bottom: 100px;
+  z-index: 2;
 }
 
 /* Toggle functionality */
@@ -36,8 +40,9 @@ html {
 #dark-mode {
   position: absolute;
   top: 10px;
-  right: 80px;
-  z-index: 1;
+  right: 90px;
+  z-index: 3;
+  background-color: transparent !important;
   color: #003559;
   border: none;
   border-radius: 50%;
@@ -50,13 +55,16 @@ html {
 #logo {
   position: absolute;
   top: 5px;
-  right: 10px;
-  z-index: 1;
+  right: 20px;
+  z-index: 3;
 }
 
-@media only screen and (max-width: 120px) {
+@media only screen and (max-width: 190px) {
   #logo {
     display: none;
+  }
+  #dark-mode {
+    right: 10px;
   }
 }
 #toggle:checked ~ .toggle-container .button-toggle:before {

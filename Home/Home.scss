@@ -1,4 +1,6 @@
-@import url();
+@import url("https://fonts.googleapis.com/css2?family=Arimo:wght@700&display=swap");
+
+$font: "Arimo", sans-serif;
 
 $color-donkerblauw: #051738;
 $color-blauw: #003559;
@@ -30,17 +32,20 @@ html {
 
     background-color: $color-wit;
     color: black;
+    overflow-x: hidden;
 }
 
 // ************************************************************* MENU
 
 .container {
-    position: relative;
+    position: sticky;
+    top: 0;
     width: 100%;
     height: auto;
     background-color: $color-wit;
     overflow: hidden;
     margin-bottom: 100px;
+    z-index: 2;
 }
 
 /* Toggle functionality */
@@ -55,10 +60,10 @@ html {
 #dark-mode {
     position: absolute;
     top: 10px;
-    right: 80px;
-    z-index: 1;
+    right: 90px;
+    z-index: 3;
 
-    // background-color: $color-bg-dark;
+    background-color: transparent !important;
     color: $color-blauw;
 
     border: none;
@@ -74,13 +79,17 @@ html {
 #logo {
     position: absolute;
     top: 5px;
-    right: 10px;
-    z-index: 1;
+    right: 20px;
+    z-index: 3;
 }
 
-@media only screen and (max-width: 120px) {
+@media only screen and (max-width: 190px) {
     #logo {
         display: none;
+    }
+
+    #dark-mode{
+        right: 10px;
     }
 }
 
