@@ -103,14 +103,13 @@ img {
     font-family: 'Arimo', sans-serif;
     color: rgb(180, 0, 0);
     font-size: 20px;
-    margin-top: 20px;
 }
 
 .alert-danger {
     font-family: 'Arimo', sans-serif;
     color: rgb(180, 0, 0);
     font-size: 20px;
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 
