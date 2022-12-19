@@ -74,7 +74,7 @@ if (mysqli_num_rows($result) > 0) {
 <div class="datum">
     <?php echo $item['Aangemaakt_op'] . "<br/>"; ?>
 </div>
-
+<br><br>
 <div class="wrap">
     <a href="poep.php"><input type="submit" class="terug-knop" value="TERUG"></a>
 </div>
