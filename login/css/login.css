@@ -81,7 +81,7 @@ img {
 }
 
 .login-knop {
-    width: 100px;
+    width: 200px;
     font-size: 40px;
     font-weight: 600;
     color: #fff;
@@ -92,7 +92,7 @@ img {
     border: none;
     background-size: 300% 100%;
 
-    border-radius: 10px;
+    border-radius: 20px;
     moz-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
     -webkit-transition: all .2s ease-in-out;
