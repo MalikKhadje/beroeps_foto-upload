@@ -53,6 +53,13 @@
 
     <!--******************** CAROUSEL ********************-->
 
+    <?php
+    if (mysqli_num_rows($result) > 0) {
+  
+        $item = mysqli_fetch_assoc($result);
+    ?>
+    ?>
+
 
     <div class="wrapper">
         <i id="left" class="fa-solid fa fa-arrow-left"></i>
@@ -89,7 +96,7 @@
 
 $id = $_GET['id'];
 // do some validation here to ensure id is safe
-    
+
 $sql = "SELECT * FROM Posts WHERE id=$id";
 $result = mysqli_query("$sql");
 $row = mysqli_fetch_assoc($result);
