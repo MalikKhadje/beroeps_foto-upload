@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (isset($_SESSION["token"]) && $_SESSION["token"] == $_POST["csrf_token"]) {
+    // het token klopt
+} else {
+    // het token klopt niet
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,23 +20,9 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<?php
-// session_start();
-// if (isset($_SESSION["token"]) && $_SESSION["token"] == $_POST["csrf_token"]) {
-//     // het token klopt
-// } else {
-//     // het token klopt niet
-// }
-
-
-
-?>
-
-
-
 <body>
 <button onclick="myFunction()" id="dark-mode" class="fa fa-moon-o w3-circle"></button>
-        <a href="" id="logo"><img src="../uploadpagina/images/logo.png" alt="Logo" width="60"></a>
+        <a href="../Home/Home.php" id="logo"><img src="images/logo.png" alt="Logo" width="60"></a>
     <!--******************** MENU ********************-->
     <div class="container">
         <!-- This checkbox will give us the toggle behavior, it will be hidden, but functional -->
@@ -43,13 +38,13 @@
             <nav class="nav">
                 <a class="nav-item" href="../Home/Home.php">Home</a>
                 <a class="nav-item" href="fotoupload.php">Upload</a>
-                <a class="nav-item" href="">Log uit</a>
+                <a class="nav-item" href="../login/php/logout.php">Log uit</a>
             </nav>
         </div>
     </div>
 
     <p class="txt" >UPLOADEN</p>
-    <img class="arrow" src="../uploadpagina/images/pijl.png" >
+    <img class="arrow" src="images/pijl.png" >
 
 
     <form method="post" class="w3-container" enctype="multipart/form-data" action="uploadVerwerk.php">
