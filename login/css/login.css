@@ -74,7 +74,6 @@ img {
     padding: 20px;
     font-size: 30px;
     font-weight: bold;
-    padding-bottom: 30px;
 }
 
 .input::placeholder {
@@ -103,13 +102,13 @@ img {
 .invalid-feedback {
     font-family: 'Arimo', sans-serif;
     color: rgb(180, 0, 0);
-    font-size: 2vw;
+    font-size: 10px;
 }
 
 .alert-danger {
     font-family: 'Arimo', sans-serif;
     color: rgb(180, 0, 0);
-    font-size: 3vw;
+    font-size: 10px;
 }
 
 
