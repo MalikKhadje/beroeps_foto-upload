@@ -4,7 +4,7 @@
 session_start();
  
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-   header("location: poep.php");
+   header("location: ../../Home/Home.php");
    exit;
 }
  
@@ -64,7 +64,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["username"] = $username;                            
                             
                             // Redirect user to welcome page
-                            header("location: poep.php");
+                            header("location: ../../Home/Home.php");
                         } else{
                             // Password is not valid, display a generic error message
                             $login_err = "INVALID USERNAME OR PASSWORD";
