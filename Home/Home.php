@@ -31,7 +31,7 @@ $query = "SELECT * FROM Posts";
     <!--******************** LOGO ********************-->
 
     <button onclick="myFunction()" id="dark-mode" class="fa fa-moon-o w3-circle"></button>
-    <a href="" id="logo"><img src="../Home/images/logo.png" alt="Logo" width="60"></a>
+    <a href="../Home/Home.php" id="logo"><img src="../Home/images/logo.png" alt="Logo" width="60"></a>
 
 
     <!--******************** MENU ********************-->
@@ -51,9 +51,9 @@ $query = "SELECT * FROM Posts";
         <!-- The nav menu -->
         <div id="nav-center">
             <nav class="nav">
-                <a class="nav-item" href="">Home</a>
-                <a class="nav-item" href="">Upload</a>
-                <a class="nav-item" href="">Log uit</a>
+                <a class="nav-item" href="../Home/Home.php">Home</a>
+                <a class="nav-item" href="../uploadpagina/fotoupload.php">Upload</a>
+                <a class="nav-item" href="../login/php/logout.php">Log uit</a>
             </nav>
         </div>
 
@@ -67,7 +67,7 @@ $query = "SELECT * FROM Posts";
 
     <div class="wrapper">
         <i id="left" class="fa-solid fa fa-arrow-left"></i>
-        <div class="carousel"><a href=""></a>
+        <div class="carousel"><a href="#"></a>
             <?php
 
             $connection = mysqli_connect("localhost", "foto_upload", "foto_upload");
@@ -124,7 +124,7 @@ $query = "SELECT * FROM Posts";
     <div id="myModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="img01">
-        <?php echo '<a href="detail.php?id=' . $row['ID'] . '">Meer info</a>' ?>
+        <?php echo '<a href="../login/php/detail.php?id=' . $row['ID'] . '">Meer info</a>' ?>
     </div>
     <?php
     }
