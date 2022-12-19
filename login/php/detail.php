@@ -44,7 +44,7 @@ if (mysqli_num_rows($result) > 0) {
 </div>
 
 <div class="foto">
-    <?php echo '<img src="data:image;base64,' . base64_encode($item['Foto']) . '>'; ?><br>
+    <?php echo '<img src="data:image;base64,' . base64_encode($item['Foto']) . '" alt="Image">'; ?><br>
 </div>
 
 <div class="beschrijving">
