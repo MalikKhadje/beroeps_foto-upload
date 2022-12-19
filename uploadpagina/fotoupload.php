@@ -1,10 +1,5 @@
 <?php
-session_start();
-if (isset($_SESSION["token"]) && $_SESSION["token"] == $_POST["csrf_token"]) {
-    // het token klopt
-} else {
-    // het token klopt niet
-}
+require_once 'session.inc.php';
 ?>
 
 <!DOCTYPE html>
