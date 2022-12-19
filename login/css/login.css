@@ -54,6 +54,7 @@ img {
 
 .wrap {
     width: auto;
+    padding-top: 30px;
 }
 
 .wrap .label {
@@ -64,6 +65,7 @@ img {
     font-size: 80px;
     color: var(--blauw--);
     font-family: 'Arimo', sans-serif;
+    padding-bottom: 30px;
 }
 
 .input {
