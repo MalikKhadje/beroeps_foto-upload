@@ -119,7 +119,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <label class="label">WACHTWOORD</label><br>
                 <input type="password" name="password" placeholder="WACHTWOORD" class="form-control input <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>"><br>
                 <span class="invalid-feedback"><?php echo $password_err; ?></span>
-            </div><br>
+            </div><br><br>
             <div class="wrap">
                 <input type="submit" class="login-knop" value="LOGIN">
             </div>
