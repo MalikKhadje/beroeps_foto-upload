@@ -11,6 +11,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    font-family: 'Arimo', sans-serif;
 }
 
 html,
@@ -49,6 +50,7 @@ body {
     font-size: 50px;
     font-weight: bold;
   }
+
   #logo {
     position: absolute;
     top: 5px;
