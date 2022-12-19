@@ -29,7 +29,7 @@
             <nav class="nav">
                 <a class="nav-item" href="">Home</a>
                 <a class="nav-item" href="">Upload</a>
-                <a class="nav-item" href="">Log uit</a>
+                <a class="nav-item" href="logout.php">Log uit</a>
             </nav>
         </div>
     </div>
@@ -74,6 +74,7 @@ if (mysqli_num_rows($result) > 0) {
 <div class="datum">
     <?php echo $item['Aangemaakt_op'] . "<br/>"; ?>
 </div>
+
 </div>
 <?php
 }
@@ -83,5 +84,4 @@ else {
     echo "Er is geen record met ID: " . $id . "<br/>";
 }
 
-echo "<a href='logout.php'>LOG UIT</a>";
     ?>
