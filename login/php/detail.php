@@ -67,11 +67,11 @@ if (mysqli_num_rows($result) > 0) {
     <?php echo '<img src="data:image;base64,' . base64_encode($item['Foto']) . '" alt="Image">'; ?><br>
 </div>
 
-<div class="beschrijving">Beschrijving:<br>
+<div class="beschrijving">Beschrijving:<br><br>
     <?php echo $item['Beschrijving'] . "<br/>"; ?>
 </div>
 
-<div class="datum">Geüpload op:<br>
+<div class="datum">Geüpload op:<br><br>
     <?php echo $item['Aangemaakt_op'] . "<br/>"; ?>
 </div>
 
