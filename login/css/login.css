@@ -82,7 +82,8 @@ img {
 
 .login-knop {
     width: 200px;
-    font-size: 40px;
+    height: 100px;
+    font-size: 30px;
     font-weight: 600;
     color: #fff;
     cursor: pointer;
@@ -119,7 +120,7 @@ img {
 
 .login-knop.color-1 {
     background-image: linear-gradient(to right, #00465f, #0263a0, #006d95, #007aab);
-    box-shadow: 0 4px 15px 0 rgba(0, 109, 119, 0.75);
+    box-shadow: 0 4px 15px 0 rgb(0, 79, 119);
 }
 
 .invalid-feedback {
