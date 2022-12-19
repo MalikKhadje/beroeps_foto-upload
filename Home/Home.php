@@ -10,16 +10,19 @@
     <!-- links -->
     <link rel="stylesheet" href="Home.scss">
     <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- JavaScript -->
-    <script src="Home.js"></script>
+    <script src="Home.js" defer></script>
+    <link rel="shortcut icon" href="../Home/images/logo.png" type="image/x-icon">
 </head>
 
 <body>
 
     <!--******************** LOGO ********************-->
 
-
-    <a href="" id="logo"><img src="../Home/images/logo.png" alt="LOGO" width="60"></a>
+    <button onclick="myFunction()" id="dark-mode" class="fa fa-moon-o w3-circle"></button>
+    <a href="" id="logo"><img src="../Home/images/logo.png" alt="Logo" width="60"></a>
 
 
     <!--******************** MENU ********************-->
@@ -37,76 +40,68 @@
         </label>
 
         <!-- The nav menu -->
-        <nav class="nav">
-            <a class="nav-item" href="">Home</a>
-            <a class="nav-item" href="">Upload</a>
-            <a class="nav-item" href="">Log uit</a>
-        </nav>
+        <div id="nav-center">
+            <nav class="nav">
+                <a class="nav-item" href="">Home</a>
+                <a class="nav-item" href="">Upload</a>
+                <a class="nav-item" href="">Log uit</a>
+            </nav>
+        </div>
+
     </div>
 
 
     <!--******************** CAROUSEL ********************-->
 
 
-    <div class="slider">
-        <input type="radio" name="testimonial" id="t-1">
-        <input type="radio" name="testimonial" id="t-2">
-        <input type="radio" name="testimonial" id="t-3" checked>
-        <input type="radio" name="testimonial" id="t-4">
-        <input type="radio" name="testimonial" id="t-5">
-
-        <div class="testimonials">
-            <label class="item" for="t-1">
-                <img src="https://dummyimage.com/150" alt="picture">
-                <p>"Raw denim you probably haven't heard of them jean short austin. Nesciunt tofu stumptown aliqua,
-                    retro synth master cleanse."</p>
-                <h2>- Princy, Web Developer</h2>
-            </label>
-            <label class="item" for="t-2">
-                <img src="https://dummyimage.com/150" alt="picture">
-                <p>"Raw denim you probably haven't heard of them jean short austin. Nesciunt tofu stumptown aliqua,
-                    retro synth master cleanse."</p>
-                <h2>- Princy, Web Developer</h2>
-            </label>
-            <label class="item" for="t-3">
-                <img src="https://dummyimage.com/150" alt="picture">
-                <p>"Raw denim you probably haven't heard of them jean short austin. Nesciunt tofu stumptown aliqua,
-                    retro synth master cleanse."</p>
-                <h2>- Princy, Web Developer</h2>
-            </label>
-            <label class="item" for="t-4">
-                <img src="https://dummyimage.com/150" alt="picture">
-                <p>"Raw denim you probably haven't heard of them jean short austin. Nesciunt tofu stumptown aliqua,
-                    retro synth master cleanse."</p>
-                <h2>- Princy, Web Developer</h2>
-            </label>
-            <label class="item" for="t-5">
-                <img src="https://dummyimage.com/150" alt="picture">
-                <p>"Raw denim you probably haven't heard of them jean short austin. Nesciunt tofu stumptown aliqua,
-                    retro synth master cleanse."</p>
-                <h2>- Princy, Web Developer</h2>
-            </label>
+    <div class="wrapper">
+        <i id="left" class="fa-solid fa fa-arrow-left"></i>
+        <div class="carousel"><a href=""></a>
+            <img src="https://picsum.photos/400/200" alt="img" draggable="false">
+            <img src="https://picsum.photos/500/750" alt="img" draggable="false">
+            <img src="https://picsum.photos/900/500" alt="img" draggable="false">
+            <img src="https://picsum.photos/100/400" alt="img" draggable="false">
+            <img src="https://picsum.photos/400/800" alt="img" draggable="false">
+            <img src="https://picsum.photos/650/100" alt="img" draggable="false">
+            <img src="https://picsum.photos/900/200" alt="img" draggable="false">
+            <img src="https://picsum.photos/100/400" alt="img" draggable="false">
+            <img src="https://picsum.photos/250/250" alt="img" draggable="false">
+            <img src="https://picsum.photos/400/200" alt="img" draggable="false">
+            <img src="https://picsum.photos/500/750" alt="img" draggable="false">
+            <img src="https://picsum.photos/900/500" alt="img" draggable="false">
+            <img src="https://picsum.photos/400/200" alt="img" draggable="false">
+            <img src="https://picsum.photos/500/750" alt="img" draggable="false">
+            <img src="https://picsum.photos/900/500" alt="img" draggable="false">
+            <img src="https://picsum.photos/400/200" alt="img" draggable="false">
+            <img src="https://picsum.photos/500/750" alt="img" draggable="false">
+            <img src="https://picsum.photos/900/500" alt="img" draggable="false">
         </div>
-
-        <div class="dots">
-            <label for="t-1"></label>
-            <label for="t-2"></label>
-            <label for="t-3"></label>
-            <label for="t-4"></label>
-            <label for="t-5"></label>
-        </div>
+        <i id="right" class="fa-solid fa fa-arrow-right"></i>
     </div>
-
 
     <!--******************** RECENTE AFBEELDINGEN ********************-->
 
+    <h1 class="w3-container recent-img-titel"><b>RECENTE AFBEELDINGEN </b></h1>
 
+    <div id="recent-img">
+        <div class="recent-img-wrap">
+            <img src="https://picsum.photos/400/200" alt="img" draggable="false">
+            <img src="https://picsum.photos/500/750" alt="img" draggable="false">
+            <img src="https://picsum.photos/900/500" alt="img" draggable="false">
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <a href="" id="caption"></a>
+    </div>
 </body>
 
 </html>
 
 <?php
 
-echo("hello")
+echo ("hello")
 
-?>
+    ?>
