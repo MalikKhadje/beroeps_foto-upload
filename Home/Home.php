@@ -64,12 +64,13 @@
             $connection = mysqli_connect("localhost", "foto_upload", "foto_upload");
             $db = mysqli_select_db($connection, 'foto_upload');
 
-            $query = " SELECT * FROM Posts ";
+
+            $query = "SELECT * FROM Posts";
             $query_run = mysqli_query($connection, $query);
 
             while ($row = mysqli_fetch_array($query_run)) {
             ?>
-            <img src="data:image;base64, <?php echo base64_encode($row['Foto']); ?>" alt="Image" draggable="false">
+            <img src="data:image;base64, <?php echo base64_encode($row['Foto']); ?>" alt="" draggable="false">
             <?php
             }
             ?>
@@ -100,10 +101,19 @@
         </div>
     </div>
 
+    <?php
+
+    $connection = mysqli_connect("localhost", "foto_upload", "foto_upload");
+    $db = mysqli_select_db($connection, 'foto_upload');
+
+    $query = "SELECT * FROM Posts";
+    $query_run = mysqli_query($connection, $query);
+    $row = mysqli_fetch_array($query_run);
+    ?>
     <div id="myModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="img01">
-        <a href="" id="caption"></a>
+        <?php echo '<a href="detail.php?id=' . $row['ID'] . '" target="_blank">Meer info</a>' ?>
     </div>
 </body>
 
