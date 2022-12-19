@@ -41,8 +41,8 @@
         <!-- The nav menu -->
         <div id="nav-center">
             <nav class="nav">
-                <a class="nav-item" href="">Home</a>
-                <a class="nav-item" href="">Upload</a>
+                <a class="nav-item" href="../Home/Home.php">Home</a>
+                <a class="nav-item" href="fotoupload.php">Upload</a>
                 <a class="nav-item" href="">Log uit</a>
             </nav>
         </div>
