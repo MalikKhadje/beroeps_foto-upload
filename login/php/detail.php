@@ -11,9 +11,28 @@
 
 </head>
 
-<div id="logo">
-    <img src="../images/logo.png" class="logo" alt="">
-</div>
+<button onclick="myFunction()" id="dark-mode" class="fa fa-moon-o w3-circle"></button>
+        <a href="" id="logo"><img src="../Home/images/logo.png" alt="Logo" width="60"></a>
+    <!--******************** MENU ********************-->
+    <div class="container">
+        <!-- This checkbox will give us the toggle behavior, it will be hidden, but functional -->
+        <input id="toggle" type="checkbox">
+        <!-- IMPORTANT: Any element that we want to modify when the checkbox state changes go here, being "sibling" of the checkbox element -->
+        <!-- This label is tied to the checkbox, and it will contain the toggle "buttons" -->
+        <label class="toggle-container" for="toggle">
+            <!-- If menu is open, it will be the "X" icon, otherwise just a clickable area behind the hamburger menu icon -->
+            <span class="button button-toggle"></span>
+        </label>
+        <!-- The nav menu -->
+        <div id="nav-center">
+            <nav class="nav">
+                <a class="nav-item" href="">Home</a>
+                <a class="nav-item" href="">Upload</a>
+                <a class="nav-item" href="">Log uit</a>
+            </nav>
+        </div>
+    </div>
+
 <h1 class="titel">LOGIN</h1>
 
 <?php
@@ -37,7 +56,7 @@ if (mysqli_num_rows($result) > 0) {
     // er hoeft maar 1 item uitgelezen te worden
     $item = mysqli_fetch_assoc($result);
 ?>
-<div class="container">
+<div class="container2">
 
 <div class="titel2">
     <?php echo $item['Titel'] . "<br/>"; ?>
