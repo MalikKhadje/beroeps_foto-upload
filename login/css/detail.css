@@ -282,6 +282,7 @@ body {
     color: var(--donkerblauw--);
     font-family: "Arimo", sans-serif;
     font-size: 50px;
+    max-width: 200px;
 }
 
 .datum {
