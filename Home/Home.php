@@ -89,7 +89,7 @@
 
 $id = $_GET['id'];
 // do some validation here to ensure id is safe
-
+    
 $sql = "SELECT * FROM Posts WHERE id=$id";
 $result = mysqli_query("$sql");
 $row = mysqli_fetch_assoc($result);
