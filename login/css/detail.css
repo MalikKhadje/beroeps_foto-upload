@@ -338,7 +338,108 @@ body {
 /* responsive web  */
 
 @media only screen and (min-width: 1000px) {
-    .titel2 {
-        font-size: 4vw;
-    }
+
+/* content van website */
+
+.titel {
+    text-align: center;
+    color: var(--donkerblauw--);
+    font-family: "Arimo", sans-serif;
+    font-size: 50px;
+}
+
+.container2 {
+    padding-top: 100px;
+    width: 100%;
+    text-align: center;
+}
+
+.wrap {
+    width: auto;
+}
+
+.titel2 {
+    padding-top: 20px;
+    text-align: center;
+    color: var(--donkerblauw--);
+    font-family: "Arimo", sans-serif;
+    font-size: 20px;
+}
+
+#foto {
+    position: relative;
+    padding-top: 40px;
+}
+
+#foto img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+}
+
+#foto img:hover {
+    transform: scale(1.05);
+}
+
+.beschrijving {
+    padding-top: 40px;
+    text-align: center;
+    color: var(--donkerblauw--);
+    font-family: "Arimo", sans-serif;
+    font-size: 10px;
+}
+
+.datum {
+    padding-bottom: 40px;
+    text-align: center;
+    color: var(--donkerblauw--);
+    font-family: "Arimo", sans-serif;
+    font-size: 5px;
+}
+
+.terug-knop {
+    width: 200px;
+    font-size: 35px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 15px;
+    moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.knop {
+    text-align: center;
+}
+
+.terug-knop:hover {
+    background-position: 100% 0;
+    moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    letter-spacing: 5px;
+    transform: scale(1.05);
+}
+
+.terug-knop:focus {
+    outline: none;
+}
+
+.terug-knop.color-1 {
+    background-image: linear-gradient(to right, #00465f, #006c9b, #007eac, #00597c);
+    box-shadow: 0 4px 15px 0 rgb(0, 72, 108);
+}
+
+
 }
