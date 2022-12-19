@@ -94,6 +94,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="stylesheet" href="../css/login.css">
     <meta charset="UTF-8">
     <title>Login</title>
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
 </head>
 <div id="logo">
         <img src="../images/logo.png" class="logo" alt="">
