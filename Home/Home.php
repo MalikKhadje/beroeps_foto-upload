@@ -59,22 +59,7 @@
         <div class="carousel"><a href=""></a>
             <img src="https://picsum.photos/400/200" alt="img" draggable="false">
             <img src="https://picsum.photos/500/750" alt="img" draggable="false">
-            <img src="https://picsum.photos/900/500" alt="img" draggable="false">
-            <img src="https://picsum.photos/100/400" alt="img" draggable="false">
-            <img src="https://picsum.photos/400/800" alt="img" draggable="false">
-            <img src="https://picsum.photos/650/100" alt="img" draggable="false">
-            <img src="https://picsum.photos/900/200" alt="img" draggable="false">
-            <img src="https://picsum.photos/100/400" alt="img" draggable="false">
-            <img src="https://picsum.photos/250/250" alt="img" draggable="false">
-            <img src="https://picsum.photos/400/200" alt="img" draggable="false">
-            <img src="https://picsum.photos/500/750" alt="img" draggable="false">
-            <img src="https://picsum.photos/900/500" alt="img" draggable="false">
-            <img src="https://picsum.photos/400/200" alt="img" draggable="false">
-            <img src="https://picsum.photos/500/750" alt="img" draggable="false">
-            <img src="https://picsum.photos/900/500" alt="img" draggable="false">
-            <img src="https://picsum.photos/400/200" alt="img" draggable="false">
-            <img src="https://picsum.photos/500/750" alt="img" draggable="false">
-            <img src="https://picsum.photos/900/500" alt="img" draggable="false">
+            <img src="getImage.php?id=1" width="175" height="200" />
         </div>
         <i id="right" class="fa-solid fa fa-arrow-right"></i>
     </div>
@@ -86,8 +71,7 @@
     <div id="recent-img">
         <div class="recent-img-wrap">
             <img src="https://picsum.photos/400/200" alt="img" draggable="false">
-            <img src="https://picsum.photos/500/750" alt="img" draggable="false">
-            <img src="https://picsum.photos/900/500" alt="img" draggable="false">
+
         </div>
     </div>
 
@@ -102,6 +86,15 @@
 
 <?php
 
-echo ("hello")
 
-    ?>
+$id = $_GET['id'];
+// do some validation here to ensure id is safe
+
+$sql = "SELECT dvdimage FROM dvd WHERE id=$id";
+$result = mysqli_query("$sql");
+$row = mysqli_fetch_assoc($result);
+mysqli_close($link);
+
+header("Content-type: image/jpeg");
+echo $row['dvdimage'];
+?>
