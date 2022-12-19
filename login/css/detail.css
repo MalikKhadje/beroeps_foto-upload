@@ -332,3 +332,13 @@ body {
     background-image: linear-gradient(to right, #00465f, #006c9b, #007eac, #00597c);
     box-shadow: 0 4px 15px 0 rgb(0, 72, 108);
 }
+
+
+
+/* responsive web  */
+
+@media only screen and (min-width: 1000px) {
+    .titel2 {
+        font-size: 4vw;
+    }
+}
