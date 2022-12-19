@@ -53,12 +53,7 @@
 
     <!--******************** CAROUSEL ********************-->
 
-    <?php
-    if (mysqli_num_rows($result) > 0) {
-  
-        $item = mysqli_fetch_assoc($result);
-    ?>
-    ?>
+    
 
 
     <div class="wrapper">
