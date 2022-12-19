@@ -68,7 +68,7 @@ if (mysqli_num_rows($result) > 0) {
 </div>
 
 <div class="beschrijving">Beschrijving:<br><br>
-    <?php echo $item['Beschrijving'] . "<br/>"; ?>
+    <?php echo $item['Beschrijving'] . "<br/><br/>"; ?>
 </div>
 
 <div class="datum">Geüpload op:<br><br>
