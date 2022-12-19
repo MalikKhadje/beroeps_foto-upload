@@ -160,8 +160,6 @@ body {
     margin: 25px 25px 20px;
     pointer-events: none;
     transition: 0.5s;
-    width: 50%;
-    height: 50%;
 }
 .nav-item {
     position: relative;
@@ -169,7 +167,7 @@ body {
     float: left;
     clear: both;
     color: transparent;
-    font-size: 1vw;
+    font-size: 14px;
     letter-spacing: -6.2px;
     height: 7px;
     line-height: 7px;
