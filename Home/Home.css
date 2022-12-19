@@ -5,6 +5,8 @@
   text-decoration: none;
   box-sizing: border-box;
   font-family: sans-serif;
+  transition-duration: 0.5s;
+  transition-delay: 0.05s;
 }
 
 body,
@@ -21,6 +23,7 @@ html {
   height: auto;
   background-color: #efefef;
   overflow: hidden;
+  margin-bottom: 100px;
 }
 
 /* Toggle functionality */
@@ -32,7 +35,7 @@ html {
 
 #dark-mode {
   position: absolute;
-  top: 25px;
+  top: 10px;
   right: 80px;
   z-index: 1;
   color: #003559;
@@ -42,11 +45,6 @@ html {
   height: 50px;
   font-size: 50px;
   font-weight: bold;
-}
-
-.dark-mode {
-  background-color: #343F4F;
-  color: #efefef;
 }
 
 #logo {
@@ -228,14 +226,14 @@ html {
   display: flex;
   width: 100%;
   position: relative;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 100px;
 }
 
 .wrapper i {
   top: 50%;
   height: 44px;
   width: 44px;
-  color: #343f4f;
+  color: #efefef;
   cursor: pointer;
   font-size: 1.15rem;
   position: absolute;
@@ -256,12 +254,14 @@ html {
 }
 
 .wrapper i:first-child {
-  left: -22px;
+  left: 10px;
   display: none;
+  background-color: #003559;
 }
 
 .wrapper i:last-child {
-  right: -22px;
+  right: 10px;
+  background-color: #003559;
 }
 
 .wrapper .carousel {
@@ -270,6 +270,7 @@ html {
   overflow: hidden;
   white-space: nowrap;
   scroll-behavior: smooth;
+  padding: 0px 100px;
 }
 
 .carousel.dragging {
@@ -283,7 +284,7 @@ html {
 }
 
 .carousel img {
-  height: 340px;
+  height: 600px;
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-user-select: none;
@@ -307,4 +308,33 @@ html {
   .carousel img {
     width: 100%;
   }
+}
+.recent-img-titel {
+  color: #003559;
+  margin-bottom: 50px;
+  margin-left: 15px;
+}
+
+#recent-img {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+#recent-img .recent-img-wrap {
+  width: 80%;
+  height: 600px;
+}
+#recent-img .recent-img-wrap img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 50px;
+}
+
+.dark-mode {
+  background-color: #343f4f !important;
+  color: #efefef !important;
 }/*# sourceMappingURL=Home.css.map */
