@@ -167,7 +167,7 @@ body {
     float: left;
     clear: both;
     color: transparent;
-    font-size: 14px;
+    font-size: 4vw;
     letter-spacing: -6.2px;
     height: 7px;
     line-height: 7px;
@@ -286,7 +286,7 @@ body {
 
 .datum {
     padding-top: 40px;
-    padding-bottom: 80px;
+    padding-bottom: 60px;
     text-align: center;
     color: var(--donkerblauw--);
     font-family: "Arimo", sans-serif;
