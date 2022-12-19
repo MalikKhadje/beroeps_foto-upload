@@ -34,7 +34,7 @@
         </div>
     </div>
 
-<h1 class="titel">LOGIN</h1>
+<h1 class="titel">DETAIL</h1>
 
 <?php
 
