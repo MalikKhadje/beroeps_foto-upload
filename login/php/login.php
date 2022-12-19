@@ -92,36 +92,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <html lang="en">
 <head>
     <link rel="stylesheet" href="../css/login.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="../js/script.js" defer></script>
     <meta charset="UTF-8">
     <title>Login</title>
 </head>
-<button onclick="myFunction()" id="dark-mode" class="fa fa-moon-o w3-circle"></button>
-        <a href="" id="logo"><img src="../images/logo.png" alt="Logo" width="60"></a>
-    <!--******************** MENU ********************-->
-    <div class="container">
-        <!-- This checkbox will give us the toggle behavior, it will be hidden, but functional -->
-        <input id="toggle" type="checkbox">
-        <!-- IMPORTANT: Any element that we want to modify when the checkbox state changes go here, being "sibling" of the checkbox element -->
-        <!-- This label is tied to the checkbox, and it will contain the toggle "buttons" -->
-        <label class="toggle-container" for="toggle">
-            <!-- If menu is open, it will be the "X" icon, otherwise just a clickable area behind the hamburger menu icon -->
-            <span class="button button-toggle"></span>
-        </label>
-        <!-- The nav menu -->
-        <div id="nav-center">
-            <nav class="nav">
-                <a class="nav-item" href="">Home</a>
-                <a class="nav-item" href="">Upload</a>
-                <a class="nav-item" href="">Log uit</a>
-            </nav>
-        </div>
+<div id="logo">
+        <img src="../images/logo.png" class="logo" alt="">
     </div>
-
 <h1 class="titel">LOGIN</h1>
 <body>
-    <div class="container2">
+    <div class="container">
 
         <?php 
         if(!empty($login_err)){
