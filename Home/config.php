@@ -19,9 +19,6 @@ if (!$mysqli) {
     exit;
 }
 
-else{
-    echo "Verbinding met " . $db_database . " is gemaakt!<br/>";
-}
 
 ?>
 
