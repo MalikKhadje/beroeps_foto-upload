@@ -294,7 +294,7 @@ body {
 }
 
 .terug-knop {
-    padding: 30px;
+    padding: 15px;
     font-size: 3vw;
     border-radius: 8px;
     border: var(--blauw--);
