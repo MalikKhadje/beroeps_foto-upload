@@ -292,7 +292,7 @@ body {
     font-size: 35px;
 }
 
-.login-knop {
+.terug-knop {
     padding: 30px;
     font-size: 60px;
     border-radius: 8px;
@@ -303,6 +303,6 @@ body {
     transition: ease-in-out 0.2s;
 }
 
-.login-knop:hover {
+.terug-knop:hover {
     transform: scale(1.05);
 }
