@@ -38,12 +38,13 @@ if (mysqli_num_rows($result) > 0) {
     $item = mysqli_fetch_assoc($result);
 ?>
 <div class="container">
-<div class="foto">
-    <?php echo '<img src="data:image;base64,' . base64_encode($item['Foto']) . '" alt="Image" style="width: 100px; height: 100px">'; ?><br>
+
+<div class="titel2">
+    <?php echo $item['Titel'] . "<br/>"; ?>
 </div>
 
-<div class="titel">
-    <?php echo $item['Titel'] . "<br/>"; ?>
+<div class="foto">
+    <?php echo '<img src="data:image;base64,' . base64_encode($item['Foto']) . '>'; ?><br>
 </div>
 
 <div class="beschrijving">

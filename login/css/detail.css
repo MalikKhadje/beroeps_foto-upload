@@ -45,6 +45,35 @@ img {
     font-size: 100px;
 }
 
+.foto {
+    width: 400px;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.titel2 {
+    text-align: center;
+    color: var(--donkerblauw--);
+    font-family: 'Arimo', sans-serif;
+    font-size: 60px;
+}
+
+.beschrijving {
+    text-align: center;
+    color: var(--donkerblauw--);
+    font-family: 'Arimo', sans-serif;
+    font-size: 50px;
+}
+
+.datum {
+    text-align: center;
+    color: var(--donkerblauw--);
+    font-family: 'Arimo', sans-serif;
+    font-size: 40px;
+}
+
 .container {
     padding-top: 100px;   
     width: 100%;
