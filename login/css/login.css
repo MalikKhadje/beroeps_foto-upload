@@ -98,8 +98,7 @@ img {
 
 .login-knop:hover {
     transform: scale(1.05);
-    box-shadow: 0px 15px 20px var(--blauw--);
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 }
 
 .invalid-feedback {
