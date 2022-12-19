@@ -110,21 +110,25 @@ $query = "SELECT * FROM Posts";
         </div>
     </div>
 
-    <div id="myModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="img01">
-        <?php
+    <?php
 
         $connection = mysqli_connect("localhost", "foto_upload", "foto_upload");
         $db = mysqli_select_db($connection, 'foto_upload');
 
         $query = "SELECT * FROM Posts";
         $query_run = mysqli_query($connection, $query);
-        $row = mysqli_fetch_array($query_run);
 
-        echo '<a href="detail.php?id=' . $row['ID'] . '">Meer info</a>'
-            ?>
+        while ($row = mysqli_fetch_array($query_run)) {
+        ?>
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <?php echo '<a href="detail.php?id=' . $row['ID'] . '" target="_blank">Meer info</a>' ?>
     </div>
+    <?php
+        }
+        ?>
+
 </body>
 
 </html>
