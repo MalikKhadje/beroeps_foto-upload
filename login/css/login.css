@@ -110,6 +110,7 @@ img {
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
     letter-spacing: 5px;
+    transform: scale(1.05);
 }
 
 .login-knop:focus {
