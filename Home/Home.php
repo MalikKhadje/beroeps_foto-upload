@@ -53,15 +53,26 @@
 
     <!--******************** CAROUSEL ********************-->
 
-    
+
 
 
     <div class="wrapper">
         <i id="left" class="fa-solid fa fa-arrow-left"></i>
         <div class="carousel"><a href=""></a>
-            <img src="https://picsum.photos/400/200" alt="img" draggable="false">
-            <img src="https://picsum.photos/500/750" alt="img" draggable="false">
-            <?php echo '<img src="data:image;base64,' . base64_encode($item['Foto']) . '" alt="Image">'; ?>
+            <?php
+
+            $connection = mysqli_connect("localhost", "foto_upload", "foto_upload");
+            $db = mysqli_select_db($connection, 'foto_upload');
+
+            $query = " SELECT * FROM Posts ";
+            $query_run = mysqli_query($connection, $query);
+
+            while ($row = mysqli_fetch_array($query_run)) {
+            ?>
+            <img src="data:image;base64, <?php echo base64_encode($row['Foto']); ?>" alt="Image" draggable="false">
+            <?php
+            }
+            ?>
         </div>
         <i id="right" class="fa-solid fa fa-arrow-right"></i>
     </div>
@@ -72,8 +83,20 @@
 
     <div id="recent-img">
         <div class="recent-img-wrap">
-            <img src="https://picsum.photos/400/200" alt="img" draggable="false">
-            <?php echo '<img src="data:image;base64,' . base64_encode($item['Foto']) . '" alt="Image">'; ?><br>
+            <?php
+
+            $connection = mysqli_connect("localhost", "foto_upload", "foto_upload");
+            $db = mysqli_select_db($connection, 'foto_upload');
+
+            $query = " SELECT * FROM Posts ORDER BY Foto DESC";
+            $query_run = mysqli_query($connection, $query);
+
+            while ($row = mysqli_fetch_array($query_run)) {
+            ?>
+            <img src="data:image;base64, <?php echo base64_encode($row['Foto']); ?>" alt="Image" draggable="false">
+            <?php
+            }
+            ?>
         </div>
     </div>
 
@@ -89,14 +112,5 @@
 <?php
 
 
-$id = $_GET['id'];
-// do some validation here to ensure id is safe
 
-$sql = "SELECT * FROM Posts WHERE id=$id";
-$result = mysqli_query("$sql");
-$row = mysqli_fetch_assoc($result);
-mysqli_close($link);
-
-header("Content-type: image/jpeg");
-echo $row['dvdimage'];
 ?>
