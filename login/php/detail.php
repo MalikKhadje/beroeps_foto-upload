@@ -27,8 +27,8 @@
         <!-- The nav menu -->
         <div id="nav-center">
             <nav class="nav">
-                <a class="nav-item" href="">Home</a>
-                <a class="nav-item" href="">Upload</a>
+                <a class="nav-item" href="../../Home/Home.php">Home</a>
+                <a class="nav-item" href="../../uploadpagina/fotoupload.php">Upload</a>
                 <a class="nav-item" href="logout.php">Log uit</a>
             </nav>
         </div>
@@ -76,7 +76,7 @@ if (mysqli_num_rows($result) > 0) {
 </div>
 
 <div class="wrap">
-    <a href="poep.php"><input type="submit" class="terug-knop color-1" value="TERUG"></a>
+    <a href="../../Home/Home.php"><input type="submit" class="terug-knop color-1" value="TERUG"></a>
 </div>
 <br><br>
 </div>
