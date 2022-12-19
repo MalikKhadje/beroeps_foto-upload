@@ -43,7 +43,7 @@ if (mysqli_num_rows($result) > 0) {
     <?php echo $item['Titel'] . "<br/>"; ?>
 </div>
 
-<div class="foto">
+<div id="foto" class="foto">
     <?php echo '<img src="data:image;base64,' . base64_encode($item['Foto']) . '" alt="Image">'; ?><br>
 </div>
 

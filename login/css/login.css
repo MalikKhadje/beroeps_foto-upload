@@ -30,12 +30,13 @@ img {
 #logo {
     position: relative;
 }
+
 #logo img {
     position: absolute;
     width: 125px;
     top: 0px;
     right: 20px;
-}
+}   
 
 .titel {
     text-align: center;

@@ -45,12 +45,21 @@ img {
     font-size: 100px;
 }
 
-.foto {
-    width: 400px;
-    height: 400px;
-    align-items: center;
-    justify-content: center;
+.container {
+    padding-top: 100px;   
+    width: 100%;
     text-align: center;
+}
+
+#foto {
+    position: relative;
+}
+
+#foto img {
+    position: absolute;
+    width: 300px;
+    top: 0px;
+    right: 20px;
 }
 
 .titel2 {
@@ -74,11 +83,6 @@ img {
     font-size: 40px;
 }
 
-.container {
-    padding-top: 100px;   
-    width: 100%;
-    text-align: center;
-}
 
 
 
