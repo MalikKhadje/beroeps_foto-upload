@@ -31,7 +31,7 @@ $query = "SELECT * FROM Posts";
     <!--******************** LOGO ********************-->
 
     <button onclick="myFunction()" id="dark-mode" class="fa fa-moon-o w3-circle"></button>
-    <a href="../Home/Home.php" id="logo"><img src="../Home/images/logo.png" alt="Logo" width="60"></a>
+    <a href="../Home/index.html" id="logo" class="fa fa-camera" style="font-size: 50px; color: #003559;"><!--<img src="../Home/images/logo.png" alt="Logo" width="60">--></a>
 
 
     <!--******************** MENU ********************-->
