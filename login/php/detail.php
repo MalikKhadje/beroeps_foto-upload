@@ -37,20 +37,22 @@ if (mysqli_num_rows($result) > 0) {
     // er hoeft maar 1 item uitgelezen te worden
     $item = mysqli_fetch_assoc($result);
 ?>
-<div class="wrap">
+<div class="container">
+<div class="foto">
     <?php echo '<img src="data:image;base64,' . base64_encode($item['Foto']) . '" alt="Image" style="width: 100px; height: 100px">'; ?><br>
 </div>
 
-<div class="wrap">
+<div class="titel">
     <?php echo $item['Titel'] . "<br/>"; ?>
 </div>
 
-<div class="wrap">
+<div class="beschrijving">
     <?php echo $item['Beschrijving'] . "<br/>"; ?>
 </div>
 
-<div class="wrap">
+<div class="datum">
     <?php echo $item['Aangemaakt_op'] . "<br/>"; ?>
+</div>
 </div>
 <?php
 }

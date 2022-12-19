@@ -19,6 +19,7 @@ body {
     height: 100%;
     scroll-behavior: smooth;
     background-color: var(--wit--);
+    overflow-x: hidden;
 }
 
 img {
@@ -48,53 +49,6 @@ img {
     padding-top: 100px;   
     width: 100%;
     text-align: center;
-}
-
-.wrap {
-    width: auto;
-}
-
-.wrap .label {
-    text-align: start;
-}
-
-.label {
-    font-size: 80px;
-    color: var(--blauw--);
-    font-family: 'Arimo', sans-serif;
-}
-
-.input {
-    height: 80px;
-    width: 800px;
-    border-radius: 0px;
-    border: var(--blauw--) 1px solid;
-    padding: 20px;
-    font-size: 30px;
-    font-weight: bold;
-}
-
-.input::placeholder {
-    font-size: 25px;
-}
-
-.login-knop {
-    padding: 30px;
-    font-size: 60px;
-    border-radius: 8px;
-    border: var(--blauw--);
-    color: var(--wit--);
-    background-color: var(--blauw--);
-    font-family: 'Arimo', sans-serif;
-    transition: ease-in-out 0.2s;
-}
-
-.knop {
-    text-align: center;
-}
-
-.login-knop:hover {
-    transform: scale(1.05);
 }
 
 
