@@ -75,6 +75,10 @@ if (mysqli_num_rows($result) > 0) {
     <?php echo $item['Aangemaakt_op'] . "<br/>"; ?>
 </div>
 
+<div class="wrap">
+    <input type="submit" class="terug-knop" value="TERUG">
+</div>
+
 </div>
 <?php
 }

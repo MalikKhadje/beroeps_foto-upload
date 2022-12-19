@@ -246,6 +246,10 @@ body {
     text-align: center;
 }
 
+.wrap {
+    width: auto;
+}
+
 .titel2 {
     padding-top: 20px;
     text-align: center;
@@ -286,4 +290,19 @@ body {
     color: var(--donkerblauw--);
     font-family: "Arimo", sans-serif;
     font-size: 35px;
+}
+
+.login-knop {
+    padding: 30px;
+    font-size: 60px;
+    border-radius: 8px;
+    border: var(--blauw--);
+    color: var(--wit--);
+    background-color: var(--blauw--);
+    font-family: 'Arimo', sans-serif;
+    transition: ease-in-out 0.2s;
+}
+
+.login-knop:hover {
+    transform: scale(1.05);
 }
