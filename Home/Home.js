@@ -108,7 +108,7 @@ for (let i = 0; i < images.length; i++) {
     images[i].addEventListener('click', function () {
         modal.style.display = "block";
         modalImg.src = this.src;
-        captionText.innerHTML = this.id ;
+        captionText.innerHTML = this.id;
     });
 }
 
