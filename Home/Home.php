@@ -79,7 +79,7 @@ $query = "SELECT * FROM Posts";
 
             while ($row = mysqli_fetch_array($query_run)) {
             ?>
-            <img src="data:image;base64, <?php echo base64_encode($row['Foto']); ?>" alt="" draggable="false">
+            <?php echo '<a   href="../login/php/detail.php?id=' . $row['ID'] . '"' ?>><img src="data:image;base64, <?php echo base64_encode($row['Foto']); ?>" alt="Image" draggable="false"></a>
             <?php
             }
             ?>
@@ -103,7 +103,7 @@ $query = "SELECT * FROM Posts";
 
             while ($row = mysqli_fetch_array($query_run)) {
             ?>
-            <img src="data:image;base64, <?php echo base64_encode($row['Foto']); ?>" alt="Image" draggable="false">
+           <?php echo '<a   href="../login/php/detail.php?id=' . $row['ID'] . '"' ?>><img src="data:image;base64, <?php echo base64_encode($row['Foto']); ?>" alt="Image" draggable="false"></a>
             <?php
             }
             ?>
