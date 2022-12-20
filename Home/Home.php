@@ -98,7 +98,7 @@ $query = "SELECT * FROM Posts";
             $connection = mysqli_connect("localhost", "foto_upload", "foto_upload");
             $db = mysqli_select_db($connection, 'foto_upload');
 
-            $query = " SELECT * FROM Posts ORDER BY Foto DESC";
+            $query = " SELECT * FROM Posts ORDER BY Aangemaakt_op DESC";
             $query_run = mysqli_query($connection, $query);
 
             while ($row = mysqli_fetch_array($query_run)) {
