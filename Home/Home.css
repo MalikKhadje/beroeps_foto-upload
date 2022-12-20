@@ -230,6 +230,16 @@ html {
   transition: 0.5s;
 }
 
+@media screen and (max-width: 500px) {
+  .nav {
+    padding-left: 35%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .nav {
+    padding-left: 30%;
+  }
+}
 .wrapper {
   display: flex;
   width: 100%;

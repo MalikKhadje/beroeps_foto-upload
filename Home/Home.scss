@@ -272,6 +272,18 @@ html {
     }
 }
 
+@media screen and (max-width: 500px) {
+    .nav {
+        padding-left: 35%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .nav {
+        padding-left: 30%;
+    }
+}
+
 // ************************************************************* CAROUSEL
 .wrapper {
     display: flex;
