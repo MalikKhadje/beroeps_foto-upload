@@ -79,7 +79,7 @@ $query = "SELECT * FROM Posts";
 
             while ($row = mysqli_fetch_array($query_run)) {
             ?>
-            <img src="data:image;base64, <?php echo base64_encode($row['Foto']); ?>" alt="" draggable="false">
+            <img src="data:image;base64, <?php echo base64_encode($row['Foto']); ?>" alt="" draggable="false" id="<?=$row['ID']?>">
             <?php
             }
             ?>
@@ -124,7 +124,7 @@ $query = "SELECT * FROM Posts";
     <div id="myModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="img01">
-        <?php echo '<a href="../login/php/detail.php?id=' . $row['ID'] . '">Meer info</a>' ?>
+        <?php echo '<a href="../login/php/detail.php?id=' . $row['ID'] . '" id="caption">Meer info</a>' ?>
     </div>
     <?php
     }
