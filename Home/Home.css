@@ -281,7 +281,7 @@ html {
   margin-left: 0px;
 }
 .wrapper .carousel a img {
-  height: 600px;
+  height: 400px;
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-user-select: none;
