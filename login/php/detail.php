@@ -14,26 +14,26 @@
 </head>
 
 <button onclick="myFunction()" id="dark-mode" class="fa fa-moon-o w3-circle"></button>
-        <a href="../../Home/Home.php" id="logo"><img src="../images/logo.png" alt="Logo" width="60"></a>
-    <!--******************** MENU ********************-->
-    <div class="container">
-        <!-- This checkbox will give us the toggle behavior, it will be hidden, but functional -->
-        <input id="toggle" type="checkbox">
-        <!-- IMPORTANT: Any element that we want to modify when the checkbox state changes go here, being "sibling" of the checkbox element -->
-        <!-- This label is tied to the checkbox, and it will contain the toggle "buttons" -->
-        <label class="toggle-container" for="toggle">
-            <!-- If menu is open, it will be the "X" icon, otherwise just a clickable area behind the hamburger menu icon -->
-            <span class="button button-toggle"></span>
-        </label>
-        <!-- The nav menu -->
-        <div id="nav-center">
-            <nav class="nav">
-                <a class="nav-item" href="../../Home/Home.php">Home</a>
-                <a class="nav-item" href="../../uploadpagina/fotoupload.php">Upload</a>
-                <a class="nav-item" href="logout.php">Log uit</a>
-            </nav>
-        </div>
+<a href="../../Home/Home.php" id="logo" class="fa fa-camera" style="font-size: 50px; color: #003559;"></a>
+<!--******************** MENU ********************-->
+<div class="container">
+    <!-- This checkbox will give us the toggle behavior, it will be hidden, but functional -->
+    <input id="toggle" type="checkbox">
+    <!-- IMPORTANT: Any element that we want to modify when the checkbox state changes go here, being "sibling" of the checkbox element -->
+    <!-- This label is tied to the checkbox, and it will contain the toggle "buttons" -->
+    <label class="toggle-container" for="toggle">
+        <!-- If menu is open, it will be the "X" icon, otherwise just a clickable area behind the hamburger menu icon -->
+        <span class="button button-toggle"></span>
+    </label>
+    <!-- The nav menu -->
+    <div id="nav-center">
+        <nav class="nav">
+            <a class="nav-item" href="../../Home/Home.php">Home</a>
+            <a class="nav-item" href="../../uploadpagina/fotoupload.php">Upload</a>
+            <a class="nav-item" href="logout.php">Log uit</a>
+        </nav>
     </div>
+</div>
 
 <h1 class="titel">DETAIL</h1>
 
@@ -60,26 +60,26 @@ if (mysqli_num_rows($result) > 0) {
 ?>
 <div class="container2">
 
-<div class="titel2">
-    <?php echo $item['Titel'] . "<br/>"; ?>
-</div>
+    <div class="titel2">
+        <?php echo $item['Titel'] . "<br/>"; ?>
+    </div>
 
-<div id="foto" class="foto">
-    <?php echo '<img src="data:image;base64,' . base64_encode($item['Foto']) . '" alt="Image">'; ?><br>
-</div>
+    <div id="foto" class="foto">
+        <?php echo '<img src="data:image;base64,' . base64_encode($item['Foto']) . '" alt="Image">'; ?><br>
+    </div>
 
-<div class="beschrijving">Beschrijving:<br><br>
-    <?php echo $item['Beschrijving'] . "<br/><br/>"; ?>
-</div>
+    <div class="beschrijving">Beschrijving:<br><br>
+        <?php echo $item['Beschrijving'] . "<br/><br/>"; ?>
+    </div>
 
-<div class="datum">Geüpload op:<br><br>
-    <?php echo $item['Aangemaakt_op'] . "<br/>"; ?>
-</div>
+    <div class="datum">Geüpload op:<br><br>
+        <?php echo $item['Aangemaakt_op'] . "<br/>"; ?>
+    </div>
 
-<div class="wrap">
-    <a href="../../Home/Home.php"><input type="submit" class="terug-knop color-1" value="TERUG"></a>
-</div>
-<br><br>
+    <div class="wrap">
+        <a href="../../Home/Home.php"><input type="submit" class="terug-knop color-1" value="TERUG"></a>
+    </div>
+    <br><br>
 </div>
 <?php
 }
@@ -89,4 +89,4 @@ else {
     echo "Er is geen record met ID: " . $id . "<br/>";
 }
 
-    ?>
+?>

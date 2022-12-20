@@ -16,9 +16,10 @@ require_once 'session.inc.php';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
 </head>
+
 <body>
-<button onclick="myFunction()" id="dark-mode" class="fa fa-moon-o w3-circle"></button>
-        <a href="../Home/Home.php" id="logo"><img src="images/logo.png" alt="Logo" width="60"></a>
+    <button onclick="myFunction()" id="dark-mode" class="fa fa-moon-o w3-circle"></button>
+    <a href="../Home/Home.php" id="logo" class="fa fa-camera" style="font-size: 50px; color: #003559;"></a>
     <!--******************** MENU ********************-->
     <div class="container">
         <!-- This checkbox will give us the toggle behavior, it will be hidden, but functional -->
@@ -39,15 +40,15 @@ require_once 'session.inc.php';
         </div>
     </div>
 
-    <p class="txt" >UPLOADEN</p>
-    <img class="arrow" src="images/pijl.png" >
+    <p class="txt">UPLOADEN</p>
+    <img class="arrow" src="images/pijl.png">
 
 
     <form method="post" class="w3-container" enctype="multipart/form-data" action="uploadVerwerk.php">
 
         <input name="Foto" type="file" id="files" multiple="multiple" accept="image/jpeg, image/png, image/jpg" hidden>
         <label class="label1" for="files">KIES FOTO</label>
-        <p class="txt1" >GEKOZEN AFBEELDING</p>
+        <p class="txt1">GEKOZEN AFBEELDING</p>
         <output></output>
 
         <textarea type="text" name="Titel" placeholder="Titel" required /></textarea><br>
