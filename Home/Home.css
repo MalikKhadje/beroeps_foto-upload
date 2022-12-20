@@ -313,6 +313,9 @@ html {
   .wrapper .carousel a img {
     width: 100%;
   }
+  .wrapper .carousel {
+    padding: 0px 50px;
+  }
 }
 
 .recent-img-titel {
