@@ -76,7 +76,7 @@ $query = "SELECT * FROM Posts";
             $db = mysqli_select_db($connection, 'foto_upload');
 
 
-            $query = "SELECT * FROM Posts";
+            $query = "SELECT * FROM Posts ORDER BY RAND()";
             $query_run = mysqli_query($connection, $query);
 
             while ($row = mysqli_fetch_array($query_run)) {
