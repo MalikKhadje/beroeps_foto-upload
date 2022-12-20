@@ -31,7 +31,9 @@ $query = "SELECT * FROM Posts";
     <!--******************** LOGO ********************-->
 
     <button onclick="myFunction()" id="dark-mode" class="fa fa-moon-o w3-circle"></button>
-    <a href="../Home/Home.php" id="logo" class="fa fa-camera" style="font-size: 50px; color: #003559;"><!--<img src="../Home/images/logo.png" alt="Logo" width="60">--></a>
+    <a href="../Home/Home.php" id="logo" class="fa fa-camera" style="font-size: 50px; color: #003559;">
+        <!--<img src="../Home/images/logo.png" alt="Logo" width="60">-->
+    </a>
 
 
     <!--******************** MENU ********************-->
@@ -79,7 +81,8 @@ $query = "SELECT * FROM Posts";
 
             while ($row = mysqli_fetch_array($query_run)) {
             ?>
-            <img src="data:image;base64, <?php echo base64_encode($row['Foto']); ?>" alt="" draggable="false" id="<?=$row['ID']?>">
+            <?php echo '<a   href="../login/php/detail.php?id=' . $row['ID'] . '"' ?>>
+            <img src="data:image;base64, <?php echo base64_encode($row['Foto']); ?>" alt="Image" draggable="false"></a>
             <?php
             }
             ?>
@@ -103,38 +106,14 @@ $query = "SELECT * FROM Posts";
 
             while ($row = mysqli_fetch_array($query_run)) {
             ?>
-            <img src="data:image;base64, <?php echo base64_encode($row['Foto']); ?>" alt="Image" draggable="false">
+            <?php echo '<a   href="../login/php/detail.php?id=' . $row['ID'] . '"' ?>><img
+                src="data:image;base64, <?php echo base64_encode($row['Foto']); ?>" alt="Image" draggable="false"></a>
             <?php
             }
             ?>
         </div>
     </div>
 
-
-    <?php
-
-    $connection = mysqli_connect("localhost", "foto_upload", "foto_upload");
-    $db = mysqli_select_db($connection, 'foto_upload');
-
-    $query = " SELECT * FROM `Posts` ";
-    $query_run = mysqli_query($connection, $query);
-
-    while ($row = mysqli_fetch_array($query_run)) {
-    ?>
-    <div id="myModal" class="modal">
-        <span class="close">&times;</span>
-<<<<<<< HEAD
-        <img class="modal-content" id="img01">
-        <?php echo '<a href="../login/php/detail.php?id=' . $row['ID'] . '" id="caption">Meer info</a>' ?>
-=======
-        <!-- <img class="modal-content" id="img01"> -->
-        <img src="data:image;base64, <?php echo base64_encode($row['Foto']); ?>" alt="Image" draggable="false">
-        <?php echo '<a href="../login/php/detail.php?id=' . $row['ID'] . '">Meer info</a>' ?>
->>>>>>> a1336fbe2234afa677fc7d9441a08899b4b673e2
-    </div>
-    <?php
-    }
-    ?>
 
 </body>
 
