@@ -14,7 +14,7 @@
 </head>
 
 <button onclick="myFunction()" id="dark-mode" class="fa fa-moon-o w3-circle"></button>
-        <a href="" id="logo"><img src="../images/logo.png" alt="Logo" width="60"></a>
+        <a href="../../Home/Home.php" id="logo"><img src="../images/logo.png" alt="Logo" width="60"></a>
     <!--******************** MENU ********************-->
     <div class="container">
         <!-- This checkbox will give us the toggle behavior, it will be hidden, but functional -->
