@@ -139,7 +139,8 @@ html {
 .button-toggle:hover {
   box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.1), inset 0 0 0 20px rgba(255, 255, 255, 0.1);
 }
-.button-toggle:before, .button-toggle:after {
+.button-toggle:before,
+.button-toggle:after {
   position: absolute;
   content: "";
   top: 50%;
@@ -213,7 +214,7 @@ html {
 .nav-item:nth-child(3) {
   letter-spacing: -4.5px;
 }
-.nav-item:nth-child(n+4) {
+.nav-item:nth-child(n + 4) {
   letter-spacing: -8px;
   margin-top: -7px;
   opacity: 0;
@@ -230,180 +231,177 @@ html {
   transition: 0.5s;
 }
 .dark-mode {
-    background-color: #343f4f !important;
-    color: #efefef !important;
+  background-color: #343f4f !important;
+  color: #efefef !important;
 }
 
 /* content van website */
 
 .titel {
-    text-align: center;
-    color: var(--donkerblauw--);
-    font-family: "Arimo", sans-serif;
-    font-size: 15vw;
+  text-align: center;
+  color: var(--donkerblauw--);
+  font-family: "Arimo", sans-serif;
+  font-size: 15vw;
 }
 
 .container2 {
-    padding-top: 100px;
-    width: 100%;
-    text-align: center;
+  padding-top: 100px;
+  width: 100%;
+  text-align: center;
 }
 
 .wrap {
-    width: auto;
+  width: auto;
 }
 
 .titel2 {
-    padding-top: 20px;
-    text-align: center;
-    color: var(--donkerblauw--);
-    font-family: "Arimo", sans-serif;
-    font-size: 8vw;
+  padding-top: 20px;
+  text-align: center;
+  color: var(--donkerblauw--);
+  font-family: "Arimo", sans-serif;
+  font-size: 8vw;
 }
 
 #foto {
-    position: relative;
-    padding-top: 40px;
+  position: relative;
+  padding-top: 40px;
 }
 
 #foto img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-    border-radius: 10px;
-    transition: 0.2s ease-in-out;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  border-radius: 10px;
+  transition: 0.2s ease-in-out;
 }
 
 #foto img:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .beschrijving {
-    padding-top: 40px;
-    text-align: center;
-    color: var(--donkerblauw--);
-    font-family: "Arimo", sans-serif;
-    font-size: 6vw;
+  padding-top: 40px;
+  text-align: center;
+  color: var(--donkerblauw--);
+  font-family: "Arimo", sans-serif;
+  font-size: 6vw;
 }
 
 .datum {
-    padding-bottom: 40px;
-    text-align: center;
-    color: var(--donkerblauw--);
-    font-family: "Arimo", sans-serif;
-    font-size: 4vw;
+  padding-bottom: 40px;
+  text-align: center;
+  color: var(--donkerblauw--);
+  font-family: "Arimo", sans-serif;
+  font-size: 4vw;
 }
 
 .terug-knop {
-    width: 200px;
-    font-size: 35px;
-    font-weight: 600;
-    color: #fff;
-    cursor: pointer;
-    margin: 20px;
-    height: 55px;
-    text-align:center;
-    border: none;
-    background-size: 300% 100%;
-    border-radius: 15px;
-    moz-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
+  width: 200px;
+  font-size: 35px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 15px;
+  moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .knop {
-    text-align: center;
+  text-align: center;
 }
 
 .terug-knop:hover {
-    background-position: 100% 0;
-    moz-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-    letter-spacing: 5px;
-    transform: scale(1.05);
+  background-position: 100% 0;
+  moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  letter-spacing: 5px;
+  transform: scale(1.05);
 }
 
 .terug-knop:focus {
-    outline: none;
+  outline: none;
 }
 
 .terug-knop.color-1 {
-    background-image: linear-gradient(to right, #00465f, #006c9b, #007eac, #00597c);
-    box-shadow: 0 4px 15px 0 rgb(0, 72, 108);
+  background-image: linear-gradient(to right, #00465f, #006c9b, #007eac, #00597c);
+  box-shadow: 0 4px 15px 0 rgb(0, 72, 108);
 }
-
-
 
 /* responsive web  */
 
 @media only screen and (min-width: 1000px) {
+  /* content van website */
 
-/* content van website */
-
-.titel {
+  .titel {
     text-align: center;
     color: var(--donkerblauw--);
     font-family: "Arimo", sans-serif;
     font-size: 80px;
-}
+  }
 
-.container2 {
+  .container2 {
     padding-top: 50px;
     width: 100%;
     text-align: center;
-}
+  }
 
-.wrap {
+  .wrap {
     width: auto;
-}
+  }
 
-.titel2 {
+  .titel2 {
     padding-top: 20px;
     text-align: center;
     color: var(--donkerblauw--);
     font-family: "Arimo", sans-serif;
     font-size: 50px;
-}
+  }
 
-#foto {
+  #foto {
     position: relative;
     padding-top: 40px;
-}
+  }
 
-#foto img {
+  #foto img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 20%;
     border-radius: 10px;
     transition: 0.2s ease-in-out;
-}
+  }
 
-#foto img:hover {
+  #foto img:hover {
     transform: scale(1.05);
-}
+  }
 
-.beschrijving {
+  .beschrijving {
     padding-top: 40px;
     text-align: center;
     color: var(--donkerblauw--);
     font-family: "Arimo", sans-serif;
     font-size: 40px;
-}
+  }
 
-.datum {
+  .datum {
     padding-bottom: 40px;
     text-align: center;
     color: var(--donkerblauw--);
     font-family: "Arimo", sans-serif;
     font-size: 30px;
-}
+  }
 
-.terug-knop {
+  .terug-knop {
     width: 200px;
     font-size: 20px;
     font-weight: 600;
@@ -411,38 +409,36 @@ html {
     cursor: pointer;
     margin: 20px;
     height: 55px;
-    text-align:center;
+    text-align: center;
     border: none;
     background-size: 300% 100%;
     border-radius: 15px;
-    moz-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-}
+    moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
 
-.knop {
+  .knop {
     text-align: center;
-}
+  }
 
-.terug-knop:hover {
+  .terug-knop:hover {
     background-position: 100% 0;
-    moz-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
+    moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     letter-spacing: 5px;
     transform: scale(1.05);
-}
+  }
 
-.terug-knop:focus {
+  .terug-knop:focus {
     outline: none;
-}
+  }
 
-.terug-knop.color-1 {
+  .terug-knop.color-1 {
     background-image: linear-gradient(to right, #00465f, #006c9b, #007eac, #00597c);
     box-shadow: 0 4px 15px 0 rgb(0, 72, 108);
-}
-
-
+  }
 }

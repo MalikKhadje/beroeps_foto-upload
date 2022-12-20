@@ -40,26 +40,26 @@ body {
 }
 
 /* ===== Scrollbar CSS ===== */
-  /* Firefox */
-  * {
+/* Firefox */
+* {
     scrollbar-width: thin;
     scrollbar-color: #003559 #ffffff;
-  }
+}
 
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
     width: 13px;
-  }
+}
 
-  *::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
     background: #ffffff;
-  }
+}
 
-  *::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
     background-color: #003559;
     border-radius: 13px;
     border: 3px solid #ffffff;
-  }
+}
 
 .container {
     position: sticky;
@@ -94,15 +94,15 @@ body {
 }
 #logo {
     position: absolute;
-    top: 5px;
-    right: 10px;
+    top: 12px;
+    right: 25px;
     z-index: 3;
 }
 @media only screen and (max-width: 190px) {
     #logo {
         display: none;
     }
-    #dark-mode{
+    #dark-mode {
         right: 10px;
     }
 }
@@ -271,15 +271,15 @@ body {
 }
 
 //---------------dark mode-eind
-.txt{
+.txt {
     font-size: 50px;
     color: $color-blauw;
 }
 
-.txt1{
+.txt1 {
     font-size: 25px;
     color: $color-blauw;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 
 .arrow {
@@ -295,18 +295,12 @@ form {
     text-align: center;
     width: 100%;
     height: auto;
-    
-    label{
+
+    label {
         width: 80%;
         height: 40px;
         margin-bottom: 20px;
     }
-
-
-
-    
-    
-   
 
     .label1 {
         background-color: #003559;
@@ -321,7 +315,7 @@ form {
         width: 100%;
         align-items: center;
     }
-    
+
     .thumbnail {
         height: 500px;
         width: 80%;
@@ -329,15 +323,14 @@ form {
         margin-bottom: 20px;
     }
 
-
     .title1 {
         height: 30px;
     }
-    
+
     .desc1 {
         height: 80px;
     }
-    
+
     .label2 {
         background-color: #003559;
         color: white;
@@ -346,7 +339,7 @@ form {
         border-radius: 0.3rem;
         cursor: pointer;
     }
-    
+
     textarea {
         border: black 2px solid;
         color: #003559;
@@ -356,13 +349,8 @@ form {
         padding: 5px;
         background-color: $color-wit;
 
-        &::placeholder{
+        &::placeholder {
             color: $color-blauw;
         }
-
     }
 }
-
-
-
-
