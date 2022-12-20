@@ -123,7 +123,8 @@ $query = "SELECT * FROM Posts";
     ?>
     <div id="myModal" class="modal">
         <span class="close">&times;</span>
-        <img class="modal-content" id="img01">
+        <!-- <img class="modal-content" id="img01"> -->
+        <img src="data:image;base64, <?php echo base64_encode($row['Foto']); ?>" alt="Image" draggable="false">
         <?php echo '<a href="../login/php/detail.php?id=' . $row['ID'] . '">Meer info</a>' ?>
     </div>
     <?php
