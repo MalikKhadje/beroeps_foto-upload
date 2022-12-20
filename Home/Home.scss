@@ -324,11 +324,16 @@ html {
         padding: 0px 100px;
 
         a {
+            margin-left: 14px;
+
+            &:first-child {
+                margin-left: 0px;
+            }
+
             img {
                 height: 600px;
                 object-fit: cover;
                 user-select: none;
-                margin-left: 14px;
                 width: calc(100% / 3);
             }
 
@@ -343,6 +348,8 @@ html {
         scroll-behavior: auto;
 
         a {
+            pointer-events: none;
+
             img {
                 pointer-events: none;
             }

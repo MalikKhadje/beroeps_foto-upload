@@ -274,6 +274,12 @@ html {
   scroll-behavior: smooth;
   padding: 0px 100px;
 }
+.wrapper .carousel a {
+  margin-left: 14px;
+}
+.wrapper .carousel a:first-child {
+  margin-left: 0px;
+}
 .wrapper .carousel a img {
   height: 600px;
   -o-object-fit: cover;
@@ -282,7 +288,6 @@ html {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  margin-left: 14px;
   width: 33.3333333333%;
 }
 .wrapper .carousel a img:first-child {
@@ -292,6 +297,9 @@ html {
   cursor: -webkit-grab;
   cursor: grab;
   scroll-behavior: auto;
+}
+.wrapper .carousel.dragging a {
+  pointer-events: none;
 }
 .wrapper .carousel.dragging a img {
   pointer-events: none;
