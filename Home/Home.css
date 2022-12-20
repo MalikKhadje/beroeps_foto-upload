@@ -318,7 +318,8 @@ html {
 .recent-img-titel {
   color: #003559;
   margin-bottom: 50px;
-  margin-left: 15px;
+  width: 100%;
+  text-align: center;
 }
 
 #recent-img {
@@ -343,4 +344,8 @@ html {
 .dark-mode {
   background-color: #343f4f !important;
   color: #efefef !important;
+}
+
+img {
+  border-radius: 4px !important;
 }/*# sourceMappingURL=Home.css.map */

@@ -373,7 +373,8 @@ html {
 .recent-img-titel {
     color: $color-blauw;
     margin-bottom: 50px;
-    margin-left: 15px;
+    width: 100%;
+    text-align: center;
 }
 
 #recent-img {
@@ -403,4 +404,8 @@ html {
 .dark-mode {
     background-color: $color-bg-dark !important;
     color: #efefef !important;
+}
+
+img {
+    border-radius: 4px !important;
 }
